@@ -1,11 +1,13 @@
-use std::{fs, path::PathBuf, sync::Mutex};
+use std::{fs, path::PathBuf, str::FromStr, sync::Mutex};
 use hotwatch::{Event, Hotwatch};
 use protobuf::Message;
 use structopt::StructOpt;
 use serde_derive::Deserialize;
 use OpenControllerLib::*;
 use once_cell::sync::Lazy;
-use tide::Request;
+use tide::{Request, log::LevelFilter};
+use log::info;
+use anyhow::{Context, Result};
 
 mod OpenControllerLib;
 
@@ -31,8 +33,8 @@ struct Opts {
     #[structopt(parse(from_os_str), help = "Sets the input file to use")]
     input: PathBuf,
 
-    #[structopt(short = "v", multiple = true, help = "Sets the level of verbosity")]
-    out_type: Option<String>,
+    #[structopt(short = "v", help = "Sets the level of verbosity", default_value = "INFO")]
+    verbosity: String,
 }
 
 async fn get_home(_: Request<()>) -> tide::Result {
@@ -44,25 +46,31 @@ async fn get_home(_: Request<()>) -> tide::Result {
 }
 
 #[async_std::main]
-async fn main() {
+async fn main() -> Result<()> {
     let opts = Opts::from_args();
-    let env = envy::from_env::<Environment>().unwrap();
+    let env = envy::from_env::<Environment>()?;
 
-    let bytes = fs::read(&opts.input).expect("Could not read file");
-    House::parse_from_bytes(&bytes).expect("Invalid file");
+    env_logger::builder()
+        .filter_level(LevelFilter::from_str(&opts.verbosity)?)
+        .init();
+
+    let bytes = fs::read(&opts.input).context("Could not read file")?;
+    House::parse_from_bytes(&bytes).context("Invalid file")?;
     *HOUSE.lock().unwrap() = Some(bytes);
 
-    let mut input_watcher = Hotwatch::new().expect("Hotwatch failed to initialize");
+    let mut input_watcher = Hotwatch::new().context("Hotwatch failed to initialize")?;
     input_watcher.watch(&opts.input, |event: Event| {
         if let Event::Write(path) = event {
             let bytes = fs::read(path).expect("Could not read file");
             House::parse_from_bytes(&bytes).expect("Invalid file");
             *HOUSE.lock().unwrap() = Some(bytes);
-            println!("Reloaded file");
+            info!("Reloaded file");
         }
-    }).expect("Failed to watch file");
+    }).context("Failed to watch file")?;
 
     let mut server = tide::new();
     server.at("/").get(get_home);
-    server.listen("0.0.0.0:".to_string() + &env.port.to_string()).await.unwrap();
+    server.listen("0.0.0.0:".to_string() + &env.port.to_string()).await.context("Failed to start server")?;
+
+    Ok(())
 }
