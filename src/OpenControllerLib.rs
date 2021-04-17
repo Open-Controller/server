@@ -3019,6 +3019,7 @@ pub struct TextInput {
     pub on_input: ::protobuf::MessageField<Lambda>,
     text: ::std::option::Option<::std::string::String>,
     icon: ::std::option::Option<::protobuf::ProtobufEnumOrUnknown<Icon>>,
+    size: ::std::option::Option<::protobuf::ProtobufEnumOrUnknown<Size>>,
     // special fields
     pub unknown_fields: ::protobuf::UnknownFields,
     pub cached_size: ::protobuf::rt::CachedSize,
@@ -3093,6 +3094,28 @@ impl TextInput {
         self.icon = ::std::option::Option::Some(::protobuf::ProtobufEnumOrUnknown::new(v));
     }
 
+    // optional .model.Size size = 4;
+
+    pub fn get_size(&self) -> Size {
+        match self.size {
+            Some(e) => e.enum_value_or(Size::SMALL),
+            None => Size::SMALL,
+        }
+    }
+
+    pub fn clear_size(&mut self) {
+        self.size = ::std::option::Option::None;
+    }
+
+    pub fn has_size(&self) -> bool {
+        self.size.is_some()
+    }
+
+    // Param is passed by value, moved
+    pub fn set_size(&mut self, v: Size) {
+        self.size = ::std::option::Option::Some(::protobuf::ProtobufEnumOrUnknown::new(v));
+    }
+
     fn generated_message_descriptor_data() -> ::protobuf::reflect::GeneratedMessageDescriptorData {
         let mut fields = ::std::vec::Vec::new();
         fields.push(::protobuf::reflect::rt::v2::make_message_field_accessor::<_, Lambda>(
@@ -3111,6 +3134,12 @@ impl TextInput {
             |m: &TextInput| { &m.icon },
             |m: &mut TextInput| { &mut m.icon },
             Icon::STAR,
+        ));
+        fields.push(::protobuf::reflect::rt::v2::make_option_enum_accessor::<_, Size>(
+            "size",
+            |m: &TextInput| { &m.size },
+            |m: &mut TextInput| { &mut m.size },
+            Size::SMALL,
         ));
         ::protobuf::reflect::GeneratedMessageDescriptorData::new_2::<TextInput>(
             "TextInput",
@@ -3155,6 +3184,12 @@ impl ::protobuf::Message for TextInput {
                     }
                     self.icon = ::std::option::Option::Some(is.read_enum_or_unknown()?);
                 },
+                4 => {
+                    if wire_type != ::protobuf::wire_format::WireTypeVarint {
+                        return ::std::result::Result::Err(::protobuf::rt::unexpected_wire_type(wire_type));
+                    }
+                    self.size = ::std::option::Option::Some(is.read_enum_or_unknown()?);
+                },
                 _ => {
                     ::protobuf::rt::read_unknown_or_skip_group(field_number, wire_type, is, self.mut_unknown_fields())?;
                 },
@@ -3177,6 +3212,9 @@ impl ::protobuf::Message for TextInput {
         if let Some(v) = self.icon {
             my_size += ::protobuf::rt::enum_or_unknown_size(2, v);
         }
+        if let Some(v) = self.size {
+            my_size += ::protobuf::rt::enum_or_unknown_size(4, v);
+        }
         my_size += ::protobuf::rt::unknown_fields_size(self.get_unknown_fields());
         self.cached_size.set(my_size);
         my_size
@@ -3191,6 +3229,9 @@ impl ::protobuf::Message for TextInput {
         }
         if let Some(v) = self.icon {
             os.write_enum(2, ::protobuf::ProtobufEnumOrUnknown::value(&v))?;
+        }
+        if let Some(v) = self.size {
+            os.write_enum(4, ::protobuf::ProtobufEnumOrUnknown::value(&v))?;
         }
         os.write_unknown_fields(self.get_unknown_fields())?;
         ::std::result::Result::Ok(())
@@ -3221,6 +3262,7 @@ impl ::protobuf::Message for TextInput {
             on_input: ::protobuf::MessageField::none(),
             text: ::std::option::Option::None,
             icon: ::std::option::Option::None,
+            size: ::std::option::Option::None,
             unknown_fields: ::protobuf::UnknownFields::new(),
             cached_size: ::protobuf::rt::CachedSize::new(),
         };
@@ -3233,6 +3275,7 @@ impl ::protobuf::Clear for TextInput {
         self.on_input.clear();
         self.text = ::std::option::Option::None;
         self.icon = ::std::option::Option::None;
+        self.size = ::std::option::Option::None;
         self.unknown_fields.clear();
     }
 }
@@ -8022,83 +8065,84 @@ static file_descriptor_proto_data: &'static [u8] = b"\
     \x0b2\r.model.LambdaR\ronBottomClick\x12=\n\x14bottom_increase_icon\x18\
     \t\x20\x01(\x0e2\x0b.model.IconR\x12bottomIncreaseIcon\x12=\n\x14bottom_\
     decrease_icon\x18\n\x20\x01(\x0e2\x0b.model.IconR\x12bottomDecreaseIcon\
-    \"j\n\tTextInput\x12(\n\x08on_input\x18\x01\x20\x02(\x0b2\r.model.Lambda\
-    R\x07onInput\x12\x12\n\x04text\x18\x03\x20\x02(\tR\x04text\x12\x1f\n\x04\
-    icon\x18\x02\x20\x01(\x0e2\x0b.model.IconR\x04icon\"\x98\x01\n\x0fTextIn\
-    putAction\x12\x14\n\x04char\x18\x01\x20\x01(\tH\0R\x04char\x12\x1e\n\tba\
-    ckspace\x18\x02\x20\x01(\x08H\0R\tbackspace\x12!\n\x0bcursor_left\x18\
-    \x03\x20\x01(\x08H\0R\ncursorLeft\x12#\n\x0ccursor_right\x18\x04\x20\x01\
-    (\x08H\0R\x0bcursorRightB\x07\n\x05inner\"\x92\x01\n\nMenuButton\x12'\n\
-    \x07content\x18\x01\x20\x03(\x0b2\r.model.WidgetR\x07content\x12\x12\n\
-    \x04text\x18\x02\x20\x02(\tR\x04text\x12\x1f\n\x04icon\x18\x03\x20\x01(\
-    \x0e2\x0b.model.IconR\x04icon\x12&\n\x04size\x18\x04\x20\x01(\x0e2\x0b.m\
-    odel.Size:\x05SMALLR\x04size\"\x07\n\x05Space\"\x88\x05\n\x06Lambda\x12\
-    \x0e\n\x02id\x18\x01\x20\x01(\tR\x02id\x12\x12\n\x04args\x18\x02\x20\x03\
-    (\tR\x04args\x12%\n\x04http\x18\x03\x20\x01(\x0b2\x0f.model.HttpFuncH\0R\
-    \x04http\x12\"\n\x03tcp\x18\x04\x20\x01(\x0b2\x0e.model.TCPFuncH\0R\x03t\
-    cp\x12(\n\x05macro\x18\x05\x20\x01(\x0b2\x10.model.MacroFuncH\0R\x05macr\
-    o\x12(\n\x05delay\x18\x06\x20\x01(\x0b2\x10.model.DelayFuncH\0R\x05delay\
-    \x12\"\n\x03ref\x18\x07\x20\x01(\x0b2\x0e.model.RefFuncH\0R\x03ref\x12:\
-    \n\x0bconcatenate\x18\x08\x20\x01(\x0b2\x16.model.ConcatenateFuncH\0R\
-    \x0bconcatenate\x125\n\npush_stack\x18\t\x20\x01(\x0b2\x14.model.PushSta\
-    ckFuncH\0R\tpushStack\x12\x18\n\x06string\x18\n\x20\x01(\tH\0R\x06string\
-    \x122\n\tpipe_args\x18\x0b\x20\x01(\x0b2\x13.model.PipeArgsFuncH\0R\x08p\
-    ipeArgs\x12>\n\rprepend_stack\x18\x0c\x20\x01(\x0b2\x17.model.PrependSta\
-    ckFuncH\0R\x0cprependStack\x12+\n\x06switch\x18\r\x20\x01(\x0b2\x11.mode\
-    l.SwitchFuncH\0R\x06switch\x12/\n\x08is_equal\x18\x0e\x20\x01(\x0b2\x12.\
-    model.IsEqualFuncH\0R\x07isEqual\x12/\n\x08get_prop\x18\x0f\x20\x01(\x0b\
-    2\x12.model.GetPropFuncH\0R\x07getPropB\x07\n\x05inner\"G\n\x08HttpFunc\
-    \x12\x10\n\x03url\x18\x01\x20\x01(\tR\x03url\x12)\n\x06method\x18\x03\
-    \x20\x01(\x0e2\x11.model.HttpMethodR\x06method\"=\n\x07TCPFunc\x12\x18\n\
-    \x07address\x18\x01\x20\x01(\tR\x07address\x12\x18\n\x07command\x18\x02\
-    \x20\x01(\tR\x07command\"4\n\tMacroFunc\x12'\n\x07lambdas\x18\x01\x20\
-    \x03(\x0b2\r.model.LambdaR\x07lambdas\"7\n\x0cPipeArgsFunc\x12'\n\x07lam\
-    bdas\x18\x01\x20\x03(\x0b2\r.model.LambdaR\x07lambdas\"\x1f\n\tDelayFunc\
-    \x12\x12\n\x04time\x18\x01\x20\x01(\x05R\x04time\"9\n\x07RefFunc\x12\x16\
-    \n\x06device\x18\x01\x20\x01(\tR\x06device\x12\x16\n\x06lambda\x18\x02\
-    \x20\x01(\tR\x06lambda\"6\n\rPushStackFunc\x12%\n\x06lambda\x18\x01\x20\
-    \x01(\x0b2\r.model.LambdaR\x06lambda\"9\n\x10PrependStackFunc\x12%\n\x06\
-    lambda\x18\x01\x20\x01(\x0b2\r.model.LambdaR\x06lambda\"+\n\x0fConcatena\
-    teFunc\x12\x18\n\x07strings\x18\x01\x20\x03(\tR\x07strings\"O\n\x0bCondi\
-    tional\x12\x1d\n\x02if\x18\x01\x20\x02(\x0b2\r.model.LambdaR\x02if\x12!\
-    \n\x04then\x18\x02\x20\x02(\x0b2\r.model.LambdaR\x04then\"c\n\nSwitchFun\
-    c\x122\n\nconditions\x18\x01\x20\x03(\x0b2\x12.model.ConditionalR\ncondi\
-    tions\x12!\n\x04else\x18\x02\x20\x01(\x0b2\r.model.LambdaR\x04else\"\xd1\
-    \x02\n\x0bIsEqualFunc\x12!\n\x0bfrom_string\x18\x01\x20\x01(\tH\0R\nfrom\
-    String\x12\x1f\n\nfrom_int64\x18\x02\x20\x01(\x03H\0R\tfromInt64\x12\x1f\
-    \n\nfrom_int32\x18\x03\x20\x01(\x05H\0R\tfromInt32\x12\x1f\n\nfrom_float\
-    \x18\x04\x20\x01(\x02H\0R\tfromFloat\x12\x1d\n\tfrom_bool\x18\x05\x20\
-    \x01(\x08H\0R\x08fromBool\x12\x1d\n\tto_string\x18\x06\x20\x01(\tH\x01R\
-    \x08toString\x12\x1b\n\x08to_int64\x18\x07\x20\x01(\x03H\x01R\x07toInt64\
-    \x12\x1b\n\x08to_int32\x18\x08\x20\x01(\x05H\x01R\x07toInt32\x12\x1b\n\
-    \x08to_float\x18\t\x20\x01(\x02H\x01R\x07toFloat\x12\x19\n\x07to_bool\
-    \x18\n\x20\x01(\x08H\x01R\x06toBoolB\x06\n\x04fromB\x04\n\x02to\"!\n\x0b\
-    GetPropFunc\x12\x12\n\x04prop\x18\x01\x20\x01(\tR\x04prop*(\n\x04Size\
-    \x12\t\n\x05SMALL\x10\0\x12\n\n\x06MEDIUM\x10\x01\x12\t\n\x05LARGE\x10\
-    \x02*I\n\nHttpMethod\x12\x07\n\x03GET\x10\0\x12\x08\n\x04HEAD\x10\x01\
-    \x12\x08\n\x04POST\x10\x02\x12\x07\n\x03PUT\x10\x03\x12\t\n\x05PATCH\x10\
-    \x04\x12\n\n\x06DELETE\x10\x05*\xb0\x05\n\x04Icon\x12\x08\n\x04STAR\x10\
-    \0\x12\x0c\n\x08ARROW_UP\x10\x01\x12\x0e\n\nARROW_DOWN\x10\x02\x12\x0e\n\
-    \nARROW_LEFT\x10\x03\x12\x0f\n\x0bARROW_RIGHT\x10\x04\x12\n\n\x06SELECT\
-    \x10\x05\x12\r\n\tVOLUME_UP\x10\x06\x12\x0f\n\x0bVOLUME_DOWN\x10\x07\x12\
-    \x0f\n\x0bVOLUME_MUTE\x10\x08\x12\x08\n\x04BACK\x10\t\x12\x06\n\x02ON\
-    \x10\n\x12\x07\n\x03OFF\x10\x0b\x12\x0b\n\x07FORWARD\x10\x0c\x12\x0b\n\
-    \x07REVERSE\x10\r\x12\x08\n\x04INFO\x10\x0e\x12\x08\n\x04HOME\x10\x0f\
-    \x12\x0e\n\nCHANNEL_UP\x10\x10\x12\x10\n\x0cCHANNEL_DOWN\x10\x11\x12\x0b\
-    \n\x07CHANNEL\x10\x12\x12\n\n\x06REMOVE\x10\x13\x12\x08\n\x04STOP\x10\
-    \x14\x12\x10\n\x0cSKIP_FORWARD\x10\x15\x12\x10\n\x0cSKIP_REVERSE\x10\x16\
-    \x12\n\n\x06RECORD\x10\x17\x12\t\n\x05PAUSE\x10\x18\x12\x08\n\x04PLAY\
-    \x10\x19\x12\t\n\x05GUIDE\x10\x1a\x12\x07\n\x03DVR\x10\x1b\x12\x08\n\x04\
-    MENU\x10\x1c\x12\x0b\n\x07OPTIONS\x10\x1d\x12\x08\n\x04EXIT\x10\x1e\x12\
-    \x0c\n\x08ASTERISK\x10\x1f\x12\t\n\x05POUND\x10\x20\x12\x13\n\x0fCLOSED_\
-    CAPTIONS\x10!\x12\n\n\x06GARAGE\x10\"\x12\x0b\n\x07LAUNDRY\x10#\x12\x0b\
-    \n\x07KITCHEN\x10$\x12\x08\n\x04NOOK\x10%\x12\x0f\n\x0bFAMILY_ROOM\x10&\
-    \x12\x0f\n\x0bLIVING_ROOM\x10'\x12\x0e\n\nMEDIA_ROOM\x10(\x12\x0f\n\x0bD\
-    INING_ROOM\x10)\x12\t\n\x05ENTRY\x10*\x12\x12\n\x0eMASTER_BEDROOM\x10+\
-    \x12\x11\n\rEXERCISE_ROOM\x10,\x12\r\n\tPLAY_ROOM\x10-\x12\x0b\n\x07BEDR\
-    OOM\x10.\x12\x08\n\x04ROOM\x10/\x12\x0c\n\x08MENU_ALT\x100\x12\x08\n\x04\
-    PLUS\x101\x12\t\n\x05MINUS\x102BR\n&com.pjtsearch.opencontroller_lib_pro\
-    toP\x01Z&pjtsearch.com/opencontroller_lib_proto\
+    \"\x92\x01\n\tTextInput\x12(\n\x08on_input\x18\x01\x20\x02(\x0b2\r.model\
+    .LambdaR\x07onInput\x12\x12\n\x04text\x18\x03\x20\x02(\tR\x04text\x12\
+    \x1f\n\x04icon\x18\x02\x20\x01(\x0e2\x0b.model.IconR\x04icon\x12&\n\x04s\
+    ize\x18\x04\x20\x01(\x0e2\x0b.model.Size:\x05SMALLR\x04size\"\x98\x01\n\
+    \x0fTextInputAction\x12\x14\n\x04char\x18\x01\x20\x01(\tH\0R\x04char\x12\
+    \x1e\n\tbackspace\x18\x02\x20\x01(\x08H\0R\tbackspace\x12!\n\x0bcursor_l\
+    eft\x18\x03\x20\x01(\x08H\0R\ncursorLeft\x12#\n\x0ccursor_right\x18\x04\
+    \x20\x01(\x08H\0R\x0bcursorRightB\x07\n\x05inner\"\x92\x01\n\nMenuButton\
+    \x12'\n\x07content\x18\x01\x20\x03(\x0b2\r.model.WidgetR\x07content\x12\
+    \x12\n\x04text\x18\x02\x20\x02(\tR\x04text\x12\x1f\n\x04icon\x18\x03\x20\
+    \x01(\x0e2\x0b.model.IconR\x04icon\x12&\n\x04size\x18\x04\x20\x01(\x0e2\
+    \x0b.model.Size:\x05SMALLR\x04size\"\x07\n\x05Space\"\x88\x05\n\x06Lambd\
+    a\x12\x0e\n\x02id\x18\x01\x20\x01(\tR\x02id\x12\x12\n\x04args\x18\x02\
+    \x20\x03(\tR\x04args\x12%\n\x04http\x18\x03\x20\x01(\x0b2\x0f.model.Http\
+    FuncH\0R\x04http\x12\"\n\x03tcp\x18\x04\x20\x01(\x0b2\x0e.model.TCPFuncH\
+    \0R\x03tcp\x12(\n\x05macro\x18\x05\x20\x01(\x0b2\x10.model.MacroFuncH\0R\
+    \x05macro\x12(\n\x05delay\x18\x06\x20\x01(\x0b2\x10.model.DelayFuncH\0R\
+    \x05delay\x12\"\n\x03ref\x18\x07\x20\x01(\x0b2\x0e.model.RefFuncH\0R\x03\
+    ref\x12:\n\x0bconcatenate\x18\x08\x20\x01(\x0b2\x16.model.ConcatenateFun\
+    cH\0R\x0bconcatenate\x125\n\npush_stack\x18\t\x20\x01(\x0b2\x14.model.Pu\
+    shStackFuncH\0R\tpushStack\x12\x18\n\x06string\x18\n\x20\x01(\tH\0R\x06s\
+    tring\x122\n\tpipe_args\x18\x0b\x20\x01(\x0b2\x13.model.PipeArgsFuncH\0R\
+    \x08pipeArgs\x12>\n\rprepend_stack\x18\x0c\x20\x01(\x0b2\x17.model.Prepe\
+    ndStackFuncH\0R\x0cprependStack\x12+\n\x06switch\x18\r\x20\x01(\x0b2\x11\
+    .model.SwitchFuncH\0R\x06switch\x12/\n\x08is_equal\x18\x0e\x20\x01(\x0b2\
+    \x12.model.IsEqualFuncH\0R\x07isEqual\x12/\n\x08get_prop\x18\x0f\x20\x01\
+    (\x0b2\x12.model.GetPropFuncH\0R\x07getPropB\x07\n\x05inner\"G\n\x08Http\
+    Func\x12\x10\n\x03url\x18\x01\x20\x01(\tR\x03url\x12)\n\x06method\x18\
+    \x03\x20\x01(\x0e2\x11.model.HttpMethodR\x06method\"=\n\x07TCPFunc\x12\
+    \x18\n\x07address\x18\x01\x20\x01(\tR\x07address\x12\x18\n\x07command\
+    \x18\x02\x20\x01(\tR\x07command\"4\n\tMacroFunc\x12'\n\x07lambdas\x18\
+    \x01\x20\x03(\x0b2\r.model.LambdaR\x07lambdas\"7\n\x0cPipeArgsFunc\x12'\
+    \n\x07lambdas\x18\x01\x20\x03(\x0b2\r.model.LambdaR\x07lambdas\"\x1f\n\t\
+    DelayFunc\x12\x12\n\x04time\x18\x01\x20\x01(\x05R\x04time\"9\n\x07RefFun\
+    c\x12\x16\n\x06device\x18\x01\x20\x01(\tR\x06device\x12\x16\n\x06lambda\
+    \x18\x02\x20\x01(\tR\x06lambda\"6\n\rPushStackFunc\x12%\n\x06lambda\x18\
+    \x01\x20\x01(\x0b2\r.model.LambdaR\x06lambda\"9\n\x10PrependStackFunc\
+    \x12%\n\x06lambda\x18\x01\x20\x01(\x0b2\r.model.LambdaR\x06lambda\"+\n\
+    \x0fConcatenateFunc\x12\x18\n\x07strings\x18\x01\x20\x03(\tR\x07strings\
+    \"O\n\x0bConditional\x12\x1d\n\x02if\x18\x01\x20\x02(\x0b2\r.model.Lambd\
+    aR\x02if\x12!\n\x04then\x18\x02\x20\x02(\x0b2\r.model.LambdaR\x04then\"c\
+    \n\nSwitchFunc\x122\n\nconditions\x18\x01\x20\x03(\x0b2\x12.model.Condit\
+    ionalR\nconditions\x12!\n\x04else\x18\x02\x20\x01(\x0b2\r.model.LambdaR\
+    \x04else\"\xd1\x02\n\x0bIsEqualFunc\x12!\n\x0bfrom_string\x18\x01\x20\
+    \x01(\tH\0R\nfromString\x12\x1f\n\nfrom_int64\x18\x02\x20\x01(\x03H\0R\t\
+    fromInt64\x12\x1f\n\nfrom_int32\x18\x03\x20\x01(\x05H\0R\tfromInt32\x12\
+    \x1f\n\nfrom_float\x18\x04\x20\x01(\x02H\0R\tfromFloat\x12\x1d\n\tfrom_b\
+    ool\x18\x05\x20\x01(\x08H\0R\x08fromBool\x12\x1d\n\tto_string\x18\x06\
+    \x20\x01(\tH\x01R\x08toString\x12\x1b\n\x08to_int64\x18\x07\x20\x01(\x03\
+    H\x01R\x07toInt64\x12\x1b\n\x08to_int32\x18\x08\x20\x01(\x05H\x01R\x07to\
+    Int32\x12\x1b\n\x08to_float\x18\t\x20\x01(\x02H\x01R\x07toFloat\x12\x19\
+    \n\x07to_bool\x18\n\x20\x01(\x08H\x01R\x06toBoolB\x06\n\x04fromB\x04\n\
+    \x02to\"!\n\x0bGetPropFunc\x12\x12\n\x04prop\x18\x01\x20\x01(\tR\x04prop\
+    *(\n\x04Size\x12\t\n\x05SMALL\x10\0\x12\n\n\x06MEDIUM\x10\x01\x12\t\n\
+    \x05LARGE\x10\x02*I\n\nHttpMethod\x12\x07\n\x03GET\x10\0\x12\x08\n\x04HE\
+    AD\x10\x01\x12\x08\n\x04POST\x10\x02\x12\x07\n\x03PUT\x10\x03\x12\t\n\
+    \x05PATCH\x10\x04\x12\n\n\x06DELETE\x10\x05*\xb0\x05\n\x04Icon\x12\x08\n\
+    \x04STAR\x10\0\x12\x0c\n\x08ARROW_UP\x10\x01\x12\x0e\n\nARROW_DOWN\x10\
+    \x02\x12\x0e\n\nARROW_LEFT\x10\x03\x12\x0f\n\x0bARROW_RIGHT\x10\x04\x12\
+    \n\n\x06SELECT\x10\x05\x12\r\n\tVOLUME_UP\x10\x06\x12\x0f\n\x0bVOLUME_DO\
+    WN\x10\x07\x12\x0f\n\x0bVOLUME_MUTE\x10\x08\x12\x08\n\x04BACK\x10\t\x12\
+    \x06\n\x02ON\x10\n\x12\x07\n\x03OFF\x10\x0b\x12\x0b\n\x07FORWARD\x10\x0c\
+    \x12\x0b\n\x07REVERSE\x10\r\x12\x08\n\x04INFO\x10\x0e\x12\x08\n\x04HOME\
+    \x10\x0f\x12\x0e\n\nCHANNEL_UP\x10\x10\x12\x10\n\x0cCHANNEL_DOWN\x10\x11\
+    \x12\x0b\n\x07CHANNEL\x10\x12\x12\n\n\x06REMOVE\x10\x13\x12\x08\n\x04STO\
+    P\x10\x14\x12\x10\n\x0cSKIP_FORWARD\x10\x15\x12\x10\n\x0cSKIP_REVERSE\
+    \x10\x16\x12\n\n\x06RECORD\x10\x17\x12\t\n\x05PAUSE\x10\x18\x12\x08\n\
+    \x04PLAY\x10\x19\x12\t\n\x05GUIDE\x10\x1a\x12\x07\n\x03DVR\x10\x1b\x12\
+    \x08\n\x04MENU\x10\x1c\x12\x0b\n\x07OPTIONS\x10\x1d\x12\x08\n\x04EXIT\
+    \x10\x1e\x12\x0c\n\x08ASTERISK\x10\x1f\x12\t\n\x05POUND\x10\x20\x12\x13\
+    \n\x0fCLOSED_CAPTIONS\x10!\x12\n\n\x06GARAGE\x10\"\x12\x0b\n\x07LAUNDRY\
+    \x10#\x12\x0b\n\x07KITCHEN\x10$\x12\x08\n\x04NOOK\x10%\x12\x0f\n\x0bFAMI\
+    LY_ROOM\x10&\x12\x0f\n\x0bLIVING_ROOM\x10'\x12\x0e\n\nMEDIA_ROOM\x10(\
+    \x12\x0f\n\x0bDINING_ROOM\x10)\x12\t\n\x05ENTRY\x10*\x12\x12\n\x0eMASTER\
+    _BEDROOM\x10+\x12\x11\n\rEXERCISE_ROOM\x10,\x12\r\n\tPLAY_ROOM\x10-\x12\
+    \x0b\n\x07BEDROOM\x10.\x12\x08\n\x04ROOM\x10/\x12\x0c\n\x08MENU_ALT\x100\
+    \x12\x08\n\x04PLUS\x101\x12\t\n\x05MINUS\x102BR\n&com.pjtsearch.opencont\
+    roller_lib_protoP\x01Z&pjtsearch.com/opencontroller_lib_proto\
 ";
 
 /// `FileDescriptorProto` object which was a source for this generated file
