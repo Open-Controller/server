@@ -74,3 +74,37 @@ async fn main() -> Result<()> {
 
     Ok(())
 }
+
+#[cfg(test)]
+mod tests {
+    use assert_cmd::prelude::*;
+    use predicates::prelude::*;
+    use std::{fs, process::Command};
+
+    #[test]
+    fn file_doesnt_exist() -> Result<(), Box<dyn std::error::Error>> {
+        let mut cmd = Command::cargo_bin("opencontroller-server")?;
+
+        cmd.arg("test/file/doesnt/exist");
+        cmd.assert()
+            .failure()
+            .stderr(predicate::str::contains("No such file or directory"));
+
+        Ok(())
+    }
+
+    #[async_std::test]
+    async fn serves_correct_data() -> Result<(), Box<dyn std::error::Error>> {
+        let mut cmd = Command::cargo_bin("opencontroller-server")?;
+
+        cmd.arg("./test/house.ocbin");
+        let mut child = cmd.spawn()?;
+        
+        let bytes = surf::get("http://0.0.0.0:3612").recv_bytes().await?;
+        child.kill()?;
+
+        assert_eq!(bytes, fs::read("./test/house.ocbin")?);
+
+        Ok(())
+    }
+}
