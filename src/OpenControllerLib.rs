@@ -592,8 +592,8 @@ pub struct Controller {
     // message fields
     display_name: ::std::option::Option<::std::string::String>,
     id: ::std::option::Option<::std::string::String>,
-    pub widgets: ::std::vec::Vec<Widget>,
     brand_color: ::std::option::Option<::std::string::String>,
+    pub display_interface: ::protobuf::MessageField<DisplayInterface>,
     // special fields
     pub unknown_fields: ::protobuf::UnknownFields,
     pub cached_size: ::protobuf::rt::CachedSize,
@@ -682,7 +682,7 @@ impl Controller {
         self.id.take().unwrap_or_else(|| ::std::string::String::new())
     }
 
-    // optional string brand_color = 4;
+    // optional string brand_color = 3;
 
     pub fn get_brand_color(&self) -> &str {
         match self.brand_color.as_ref() {
@@ -732,16 +732,16 @@ impl Controller {
             |m: &mut Controller| { &mut m.id },
             Controller::get_id,
         ));
-        fields.push(::protobuf::reflect::rt::v2::make_vec_simpler_accessor::<_, _>(
-            "widgets",
-            |m: &Controller| { &m.widgets },
-            |m: &mut Controller| { &mut m.widgets },
-        ));
         fields.push(::protobuf::reflect::rt::v2::make_option_get_ref_simpler_accessor::<_, _>(
             "brand_color",
             |m: &Controller| { &m.brand_color },
             |m: &mut Controller| { &mut m.brand_color },
             Controller::get_brand_color,
+        ));
+        fields.push(::protobuf::reflect::rt::v2::make_message_field_accessor::<_, DisplayInterface>(
+            "display_interface",
+            |m: &Controller| { &m.display_interface },
+            |m: &mut Controller| { &mut m.display_interface },
         ));
         ::protobuf::reflect::GeneratedMessageDescriptorData::new_2::<Controller>(
             "Controller",
@@ -759,7 +759,7 @@ impl ::protobuf::Message for Controller {
         if self.id.is_none() {
             return false;
         }
-        for v in &self.widgets {
+        for v in &self.display_interface {
             if !v.is_initialized() {
                 return false;
             }
@@ -784,13 +784,13 @@ impl ::protobuf::Message for Controller {
                     self.id = ::std::option::Option::Some(is.read_string()?);
                 },
                 3 => {
-                    ::protobuf::rt::read_repeated_message_into_vec(wire_type, is, &mut self.widgets)?;
-                },
-                4 => {
                     if wire_type != ::protobuf::wire_format::WireTypeLengthDelimited {
                         return ::std::result::Result::Err(::protobuf::rt::unexpected_wire_type(wire_type));
                     }
                     self.brand_color = ::std::option::Option::Some(is.read_string()?);
+                },
+                4 => {
+                    ::protobuf::rt::read_singular_message_into_field(wire_type, is, &mut self.display_interface)?;
                 },
                 _ => {
                     ::protobuf::rt::read_unknown_or_skip_group(field_number, wire_type, is, self.mut_unknown_fields())?;
@@ -810,12 +810,12 @@ impl ::protobuf::Message for Controller {
         if let Some(v) = self.id.as_ref() {
             my_size += ::protobuf::rt::string_size(2, &v);
         }
-        for value in &self.widgets {
-            let len = value.compute_size();
-            my_size += 1 + ::protobuf::rt::compute_raw_varint32_size(len) + len;
-        };
         if let Some(v) = self.brand_color.as_ref() {
-            my_size += ::protobuf::rt::string_size(4, &v);
+            my_size += ::protobuf::rt::string_size(3, &v);
+        }
+        if let Some(v) = self.display_interface.as_ref() {
+            let len = v.compute_size();
+            my_size += 1 + ::protobuf::rt::compute_raw_varint32_size(len) + len;
         }
         my_size += ::protobuf::rt::unknown_fields_size(self.get_unknown_fields());
         self.cached_size.set(my_size);
@@ -829,11 +829,11 @@ impl ::protobuf::Message for Controller {
         if let Some(v) = self.id.as_ref() {
             os.write_string(2, v)?;
         }
-        for v in &self.widgets {
-            ::protobuf::rt::write_message_field_with_cached_size(3, v, os)?;
-        };
         if let Some(v) = self.brand_color.as_ref() {
-            os.write_string(4, v)?;
+            os.write_string(3, v)?;
+        }
+        if let Some(v) = self.display_interface.as_ref() {
+            ::protobuf::rt::write_message_field_with_cached_size(4, v, os)?;
         }
         os.write_unknown_fields(self.get_unknown_fields())?;
         ::std::result::Result::Ok(())
@@ -863,8 +863,8 @@ impl ::protobuf::Message for Controller {
         static instance: Controller = Controller {
             display_name: ::std::option::Option::None,
             id: ::std::option::Option::None,
-            widgets: ::std::vec::Vec::new(),
             brand_color: ::std::option::Option::None,
+            display_interface: ::protobuf::MessageField::none(),
             unknown_fields: ::protobuf::UnknownFields::new(),
             cached_size: ::protobuf::rt::CachedSize::new(),
         };
@@ -876,8 +876,8 @@ impl ::protobuf::Clear for Controller {
     fn clear(&mut self) {
         self.display_name = ::std::option::Option::None;
         self.id = ::std::option::Option::None;
-        self.widgets.clear();
         self.brand_color = ::std::option::Option::None;
+        self.display_interface.clear();
         self.unknown_fields.clear();
     }
 }
@@ -889,6 +889,134 @@ impl ::std::fmt::Debug for Controller {
 }
 
 impl ::protobuf::reflect::ProtobufValue for Controller {
+    type RuntimeType = ::protobuf::reflect::runtime_types::RuntimeTypeMessage<Self>;
+}
+
+#[derive(PartialEq,Clone,Default)]
+pub struct DisplayInterface {
+    // message fields
+    pub widgets: ::std::vec::Vec<Widget>,
+    // special fields
+    pub unknown_fields: ::protobuf::UnknownFields,
+    pub cached_size: ::protobuf::rt::CachedSize,
+}
+
+impl<'a> ::std::default::Default for &'a DisplayInterface {
+    fn default() -> &'a DisplayInterface {
+        <DisplayInterface as ::protobuf::Message>::default_instance()
+    }
+}
+
+impl DisplayInterface {
+    pub fn new() -> DisplayInterface {
+        ::std::default::Default::default()
+    }
+
+    fn generated_message_descriptor_data() -> ::protobuf::reflect::GeneratedMessageDescriptorData {
+        let mut fields = ::std::vec::Vec::new();
+        fields.push(::protobuf::reflect::rt::v2::make_vec_simpler_accessor::<_, _>(
+            "widgets",
+            |m: &DisplayInterface| { &m.widgets },
+            |m: &mut DisplayInterface| { &mut m.widgets },
+        ));
+        ::protobuf::reflect::GeneratedMessageDescriptorData::new_2::<DisplayInterface>(
+            "DisplayInterface",
+            3,
+            fields,
+        )
+    }
+}
+
+impl ::protobuf::Message for DisplayInterface {
+    fn is_initialized(&self) -> bool {
+        for v in &self.widgets {
+            if !v.is_initialized() {
+                return false;
+            }
+        };
+        true
+    }
+
+    fn merge_from(&mut self, is: &mut ::protobuf::CodedInputStream<'_>) -> ::protobuf::ProtobufResult<()> {
+        while !is.eof()? {
+            let (field_number, wire_type) = is.read_tag_unpack()?;
+            match field_number {
+                1 => {
+                    ::protobuf::rt::read_repeated_message_into_vec(wire_type, is, &mut self.widgets)?;
+                },
+                _ => {
+                    ::protobuf::rt::read_unknown_or_skip_group(field_number, wire_type, is, self.mut_unknown_fields())?;
+                },
+            };
+        }
+        ::std::result::Result::Ok(())
+    }
+
+    // Compute sizes of nested messages
+    #[allow(unused_variables)]
+    fn compute_size(&self) -> u32 {
+        let mut my_size = 0;
+        for value in &self.widgets {
+            let len = value.compute_size();
+            my_size += 1 + ::protobuf::rt::compute_raw_varint32_size(len) + len;
+        };
+        my_size += ::protobuf::rt::unknown_fields_size(self.get_unknown_fields());
+        self.cached_size.set(my_size);
+        my_size
+    }
+
+    fn write_to_with_cached_sizes(&self, os: &mut ::protobuf::CodedOutputStream<'_>) -> ::protobuf::ProtobufResult<()> {
+        for v in &self.widgets {
+            ::protobuf::rt::write_message_field_with_cached_size(1, v, os)?;
+        };
+        os.write_unknown_fields(self.get_unknown_fields())?;
+        ::std::result::Result::Ok(())
+    }
+
+    fn get_cached_size(&self) -> u32 {
+        self.cached_size.get()
+    }
+
+    fn get_unknown_fields(&self) -> &::protobuf::UnknownFields {
+        &self.unknown_fields
+    }
+
+    fn mut_unknown_fields(&mut self) -> &mut ::protobuf::UnknownFields {
+        &mut self.unknown_fields
+    }
+
+    fn new() -> DisplayInterface {
+        DisplayInterface::new()
+    }
+
+    fn descriptor_static() -> ::protobuf::reflect::MessageDescriptor {
+        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 3)
+    }
+
+    fn default_instance() -> &'static DisplayInterface {
+        static instance: DisplayInterface = DisplayInterface {
+            widgets: ::std::vec::Vec::new(),
+            unknown_fields: ::protobuf::UnknownFields::new(),
+            cached_size: ::protobuf::rt::CachedSize::new(),
+        };
+        &instance
+    }
+}
+
+impl ::protobuf::Clear for DisplayInterface {
+    fn clear(&mut self) {
+        self.widgets.clear();
+        self.unknown_fields.clear();
+    }
+}
+
+impl ::std::fmt::Debug for DisplayInterface {
+    fn fmt(&self, f: &mut ::std::fmt::Formatter<'_>) -> ::std::fmt::Result {
+        ::protobuf::text_format::fmt(self, f)
+    }
+}
+
+impl ::protobuf::reflect::ProtobufValue for DisplayInterface {
     type RuntimeType = ::protobuf::reflect::runtime_types::RuntimeTypeMessage<Self>;
 }
 
@@ -964,7 +1092,7 @@ impl Device {
         ));
         ::protobuf::reflect::GeneratedMessageDescriptorData::new_2::<Device>(
             "Device",
-            3,
+            4,
             fields,
         )
     }
@@ -1048,7 +1176,7 @@ impl ::protobuf::Message for Device {
     }
 
     fn descriptor_static() -> ::protobuf::reflect::MessageDescriptor {
-        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 3)
+        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 4)
     }
 
     fn default_instance() -> &'static Device {
@@ -1579,7 +1707,7 @@ impl Widget {
         ));
         ::protobuf::reflect::GeneratedMessageDescriptorData::new_2::<Widget>(
             "Widget",
-            4,
+            5,
             fields,
         )
     }
@@ -1797,7 +1925,7 @@ impl ::protobuf::Message for Widget {
     }
 
     fn descriptor_static() -> ::protobuf::reflect::MessageDescriptor {
-        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 4)
+        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 5)
     }
 
     fn default_instance() -> &'static Widget {
@@ -1985,7 +2113,7 @@ impl Button {
         ));
         ::protobuf::reflect::GeneratedMessageDescriptorData::new_2::<Button>(
             "Button",
-            5,
+            6,
             fields,
         )
     }
@@ -2096,7 +2224,7 @@ impl ::protobuf::Message for Button {
     }
 
     fn descriptor_static() -> ::protobuf::reflect::MessageDescriptor {
-        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 5)
+        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 6)
     }
 
     fn default_instance() -> &'static Button {
@@ -2161,7 +2289,7 @@ impl Row {
         ));
         ::protobuf::reflect::GeneratedMessageDescriptorData::new_2::<Row>(
             "Row",
-            6,
+            7,
             fields,
         )
     }
@@ -2230,7 +2358,7 @@ impl ::protobuf::Message for Row {
     }
 
     fn descriptor_static() -> ::protobuf::reflect::MessageDescriptor {
-        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 6)
+        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 7)
     }
 
     fn default_instance() -> &'static Row {
@@ -2289,7 +2417,7 @@ impl Column {
         ));
         ::protobuf::reflect::GeneratedMessageDescriptorData::new_2::<Column>(
             "Column",
-            7,
+            8,
             fields,
         )
     }
@@ -2358,7 +2486,7 @@ impl ::protobuf::Message for Column {
     }
 
     fn descriptor_static() -> ::protobuf::reflect::MessageDescriptor {
-        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 7)
+        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 8)
     }
 
     fn default_instance() -> &'static Column {
@@ -2441,7 +2569,7 @@ impl ArrowLayout {
         ));
         ::protobuf::reflect::GeneratedMessageDescriptorData::new_2::<ArrowLayout>(
             "ArrowLayout",
-            8,
+            9,
             fields,
         )
     }
@@ -2585,7 +2713,7 @@ impl ::protobuf::Message for ArrowLayout {
     }
 
     fn descriptor_static() -> ::protobuf::reflect::MessageDescriptor {
-        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 8)
+        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 9)
     }
 
     fn default_instance() -> &'static ArrowLayout {
@@ -2752,7 +2880,7 @@ impl SwipePad {
         ));
         ::protobuf::reflect::GeneratedMessageDescriptorData::new_2::<SwipePad>(
             "SwipePad",
-            9,
+            10,
             fields,
         )
     }
@@ -2965,7 +3093,7 @@ impl ::protobuf::Message for SwipePad {
     }
 
     fn descriptor_static() -> ::protobuf::reflect::MessageDescriptor {
-        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 9)
+        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 10)
     }
 
     fn default_instance() -> &'static SwipePad {
@@ -3143,7 +3271,7 @@ impl TextInput {
         ));
         ::protobuf::reflect::GeneratedMessageDescriptorData::new_2::<TextInput>(
             "TextInput",
-            10,
+            11,
             fields,
         )
     }
@@ -3254,7 +3382,7 @@ impl ::protobuf::Message for TextInput {
     }
 
     fn descriptor_static() -> ::protobuf::reflect::MessageDescriptor {
-        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 10)
+        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 11)
     }
 
     fn default_instance() -> &'static TextInput {
@@ -3462,7 +3590,7 @@ impl TextInputAction {
         ));
         ::protobuf::reflect::GeneratedMessageDescriptorData::new_2::<TextInputAction>(
             "TextInputAction",
-            11,
+            12,
             fields,
         )
     }
@@ -3572,7 +3700,7 @@ impl ::protobuf::Message for TextInputAction {
     }
 
     fn descriptor_static() -> ::protobuf::reflect::MessageDescriptor {
-        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 11)
+        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 12)
     }
 
     fn default_instance() -> &'static TextInputAction {
@@ -3750,7 +3878,7 @@ impl MenuButton {
         ));
         ::protobuf::reflect::GeneratedMessageDescriptorData::new_2::<MenuButton>(
             "MenuButton",
-            12,
+            13,
             fields,
         )
     }
@@ -3858,7 +3986,7 @@ impl ::protobuf::Message for MenuButton {
     }
 
     fn descriptor_static() -> ::protobuf::reflect::MessageDescriptor {
-        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 12)
+        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 13)
     }
 
     fn default_instance() -> &'static MenuButton {
@@ -3916,7 +4044,7 @@ impl Space {
         let mut fields = ::std::vec::Vec::new();
         ::protobuf::reflect::GeneratedMessageDescriptorData::new_2::<Space>(
             "Space",
-            13,
+            14,
             fields,
         )
     }
@@ -3970,7 +4098,7 @@ impl ::protobuf::Message for Space {
     }
 
     fn descriptor_static() -> ::protobuf::reflect::MessageDescriptor {
-        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 13)
+        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 14)
     }
 
     fn default_instance() -> &'static Space {
@@ -4948,7 +5076,7 @@ impl Lambda {
         ));
         ::protobuf::reflect::GeneratedMessageDescriptorData::new_2::<Lambda>(
             "Lambda",
-            14,
+            15,
             fields,
         )
     }
@@ -5313,7 +5441,7 @@ impl ::protobuf::Message for Lambda {
     }
 
     fn descriptor_static() -> ::protobuf::reflect::MessageDescriptor {
-        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 14)
+        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 15)
     }
 
     fn default_instance() -> &'static Lambda {
@@ -5486,7 +5614,7 @@ impl HttpFunc {
         ));
         ::protobuf::reflect::GeneratedMessageDescriptorData::new_2::<HttpFunc>(
             "HttpFunc",
-            15,
+            16,
             fields,
         )
     }
@@ -5564,7 +5692,7 @@ impl ::protobuf::Message for HttpFunc {
     }
 
     fn descriptor_static() -> ::protobuf::reflect::MessageDescriptor {
-        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 15)
+        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 16)
     }
 
     fn default_instance() -> &'static HttpFunc {
@@ -5705,7 +5833,7 @@ impl TCPFunc {
         ));
         ::protobuf::reflect::GeneratedMessageDescriptorData::new_2::<TCPFunc>(
             "TCPFunc",
-            16,
+            17,
             fields,
         )
     }
@@ -5783,7 +5911,7 @@ impl ::protobuf::Message for TCPFunc {
     }
 
     fn descriptor_static() -> ::protobuf::reflect::MessageDescriptor {
-        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 16)
+        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 17)
     }
 
     fn default_instance() -> &'static TCPFunc {
@@ -5844,7 +5972,7 @@ impl MacroFunc {
         ));
         ::protobuf::reflect::GeneratedMessageDescriptorData::new_2::<MacroFunc>(
             "MacroFunc",
-            17,
+            18,
             fields,
         )
     }
@@ -5913,7 +6041,7 @@ impl ::protobuf::Message for MacroFunc {
     }
 
     fn descriptor_static() -> ::protobuf::reflect::MessageDescriptor {
-        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 17)
+        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 18)
     }
 
     fn default_instance() -> &'static MacroFunc {
@@ -5972,7 +6100,7 @@ impl PipeArgsFunc {
         ));
         ::protobuf::reflect::GeneratedMessageDescriptorData::new_2::<PipeArgsFunc>(
             "PipeArgsFunc",
-            18,
+            19,
             fields,
         )
     }
@@ -6041,7 +6169,7 @@ impl ::protobuf::Message for PipeArgsFunc {
     }
 
     fn descriptor_static() -> ::protobuf::reflect::MessageDescriptor {
-        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 18)
+        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 19)
     }
 
     fn default_instance() -> &'static PipeArgsFunc {
@@ -6120,7 +6248,7 @@ impl DelayFunc {
         ));
         ::protobuf::reflect::GeneratedMessageDescriptorData::new_2::<DelayFunc>(
             "DelayFunc",
-            19,
+            20,
             fields,
         )
     }
@@ -6186,7 +6314,7 @@ impl ::protobuf::Message for DelayFunc {
     }
 
     fn descriptor_static() -> ::protobuf::reflect::MessageDescriptor {
-        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 19)
+        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 20)
     }
 
     fn default_instance() -> &'static DelayFunc {
@@ -6325,7 +6453,7 @@ impl RefFunc {
         ));
         ::protobuf::reflect::GeneratedMessageDescriptorData::new_2::<RefFunc>(
             "RefFunc",
-            20,
+            21,
             fields,
         )
     }
@@ -6403,7 +6531,7 @@ impl ::protobuf::Message for RefFunc {
     }
 
     fn descriptor_static() -> ::protobuf::reflect::MessageDescriptor {
-        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 20)
+        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 21)
     }
 
     fn default_instance() -> &'static RefFunc {
@@ -6464,7 +6592,7 @@ impl PushStackFunc {
         ));
         ::protobuf::reflect::GeneratedMessageDescriptorData::new_2::<PushStackFunc>(
             "PushStackFunc",
-            21,
+            22,
             fields,
         )
     }
@@ -6533,7 +6661,7 @@ impl ::protobuf::Message for PushStackFunc {
     }
 
     fn descriptor_static() -> ::protobuf::reflect::MessageDescriptor {
-        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 21)
+        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 22)
     }
 
     fn default_instance() -> &'static PushStackFunc {
@@ -6592,7 +6720,7 @@ impl PrependStackFunc {
         ));
         ::protobuf::reflect::GeneratedMessageDescriptorData::new_2::<PrependStackFunc>(
             "PrependStackFunc",
-            22,
+            23,
             fields,
         )
     }
@@ -6661,7 +6789,7 @@ impl ::protobuf::Message for PrependStackFunc {
     }
 
     fn descriptor_static() -> ::protobuf::reflect::MessageDescriptor {
-        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 22)
+        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 23)
     }
 
     fn default_instance() -> &'static PrependStackFunc {
@@ -6720,7 +6848,7 @@ impl ConcatenateFunc {
         ));
         ::protobuf::reflect::GeneratedMessageDescriptorData::new_2::<ConcatenateFunc>(
             "ConcatenateFunc",
-            23,
+            24,
             fields,
         )
     }
@@ -6783,7 +6911,7 @@ impl ::protobuf::Message for ConcatenateFunc {
     }
 
     fn descriptor_static() -> ::protobuf::reflect::MessageDescriptor {
-        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 23)
+        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 24)
     }
 
     fn default_instance() -> &'static ConcatenateFunc {
@@ -6848,7 +6976,7 @@ impl Conditional {
         ));
         ::protobuf::reflect::GeneratedMessageDescriptorData::new_2::<Conditional>(
             "Conditional",
-            24,
+            25,
             fields,
         )
     }
@@ -6938,7 +7066,7 @@ impl ::protobuf::Message for Conditional {
     }
 
     fn descriptor_static() -> ::protobuf::reflect::MessageDescriptor {
-        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 24)
+        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 25)
     }
 
     fn default_instance() -> &'static Conditional {
@@ -7005,7 +7133,7 @@ impl SwitchFunc {
         ));
         ::protobuf::reflect::GeneratedMessageDescriptorData::new_2::<SwitchFunc>(
             "SwitchFunc",
-            25,
+            26,
             fields,
         )
     }
@@ -7089,7 +7217,7 @@ impl ::protobuf::Message for SwitchFunc {
     }
 
     fn descriptor_static() -> ::protobuf::reflect::MessageDescriptor {
-        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 25)
+        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 26)
     }
 
     fn default_instance() -> &'static SwitchFunc {
@@ -7504,7 +7632,7 @@ impl IsEqualFunc {
         ));
         ::protobuf::reflect::GeneratedMessageDescriptorData::new_2::<IsEqualFunc>(
             "IsEqualFunc",
-            26,
+            27,
             fields,
         )
     }
@@ -7694,7 +7822,7 @@ impl ::protobuf::Message for IsEqualFunc {
     }
 
     fn descriptor_static() -> ::protobuf::reflect::MessageDescriptor {
-        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 26)
+        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 27)
     }
 
     fn default_instance() -> &'static IsEqualFunc {
@@ -7828,7 +7956,7 @@ impl GetPropFunc {
         ));
         ::protobuf::reflect::GeneratedMessageDescriptorData::new_2::<GetPropFunc>(
             "GetPropFunc",
-            27,
+            28,
             fields,
         )
     }
@@ -7894,7 +8022,7 @@ impl ::protobuf::Message for GetPropFunc {
     }
 
     fn descriptor_static() -> ::protobuf::reflect::MessageDescriptor {
-        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 27)
+        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 28)
     }
 
     fn default_instance() -> &'static GetPropFunc {
@@ -7973,7 +8101,7 @@ impl GetIndexFunc {
         ));
         ::protobuf::reflect::GeneratedMessageDescriptorData::new_2::<GetIndexFunc>(
             "GetIndexFunc",
-            28,
+            29,
             fields,
         )
     }
@@ -8039,7 +8167,7 @@ impl ::protobuf::Message for GetIndexFunc {
     }
 
     fn descriptor_static() -> ::protobuf::reflect::MessageDescriptor {
-        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 28)
+        ::protobuf::reflect::MessageDescriptor::new_generated_2(file_descriptor(), 29)
     }
 
     fn default_instance() -> &'static GetIndexFunc {
@@ -8384,125 +8512,127 @@ static file_descriptor_proto_data: &'static [u8] = b"\
     \tR\x0bdisplayName\x12\x0e\n\x02id\x18\x02\x20\x02(\tR\x02id\x123\n\x0bc\
     ontrollers\x18\x03\x20\x03(\x0b2\x11.model.ControllerR\x0bcontrollers\
     \x12%\n\x04icon\x18\x04\x20\x01(\x0e2\x0b.model.Icon:\x04ROOMR\x04icon\"\
-    \x89\x01\n\nController\x12!\n\x0cdisplay_name\x18\x01\x20\x02(\tR\x0bdis\
-    playName\x12\x0e\n\x02id\x18\x02\x20\x02(\tR\x02id\x12'\n\x07widgets\x18\
-    \x03\x20\x03(\x0b2\r.model.WidgetR\x07widgets\x12\x1f\n\x0bbrand_color\
-    \x18\x04\x20\x01(\tR\nbrandColor\"A\n\x06Device\x12\x0e\n\x02id\x18\x01\
-    \x20\x02(\tR\x02id\x12'\n\x07lambdas\x18\x02\x20\x03(\x0b2\r.model.Lambd\
-    aR\x07lambdas\"\x93\x03\n\x06Widget\x12\x16\n\x06expand\x18\x01\x20\x01(\
-    \x08R\x06expand\x12'\n\x06button\x18\x02\x20\x01(\x0b2\r.model.ButtonH\0\
-    R\x06button\x12\x1e\n\x03row\x18\x03\x20\x01(\x0b2\n.model.RowH\0R\x03ro\
-    w\x12'\n\x06column\x18\x04\x20\x01(\x0b2\r.model.ColumnH\0R\x06column\
-    \x127\n\x0carrow_layout\x18\x05\x20\x01(\x0b2\x12.model.ArrowLayoutH\0R\
-    \x0barrowLayout\x12$\n\x05space\x18\x06\x20\x01(\x0b2\x0c.model.SpaceH\0\
-    R\x05space\x121\n\ntext_input\x18\x07\x20\x01(\x0b2\x10.model.TextInputH\
-    \0R\ttextInput\x12.\n\tswipe_pad\x18\x08\x20\x01(\x0b2\x0f.model.SwipePa\
-    dH\0R\x08swipePad\x124\n\x0bmenu_button\x18\t\x20\x01(\x0b2\x11.model.Me\
-    nuButtonH\0R\nmenuButtonB\x07\n\x05inner\"\x8f\x01\n\x06Button\x12(\n\
-    \x08on_click\x18\x01\x20\x02(\x0b2\r.model.LambdaR\x07onClick\x12\x1f\n\
-    \x04icon\x18\x02\x20\x01(\x0e2\x0b.model.IconR\x04icon\x12\x12\n\x04text\
-    \x18\x03\x20\x02(\tR\x04text\x12&\n\x04size\x18\x04\x20\x01(\x0e2\x0b.mo\
-    del.Size:\x05SMALLR\x04size\"0\n\x03Row\x12)\n\x08children\x18\x01\x20\
-    \x03(\x0b2\r.model.WidgetR\x08children\"3\n\x06Column\x12)\n\x08children\
-    \x18\x01\x20\x03(\x0b2\r.model.WidgetR\x08children\"\xc4\x01\n\x0bArrowL\
-    ayout\x12\x1f\n\x03top\x18\x01\x20\x02(\x0b2\r.model.WidgetR\x03top\x12%\
-    \n\x06bottom\x18\x02\x20\x02(\x0b2\r.model.WidgetR\x06bottom\x12!\n\x04l\
-    eft\x18\x03\x20\x02(\x0b2\r.model.WidgetR\x04left\x12#\n\x05right\x18\
-    \x04\x20\x02(\x0b2\r.model.WidgetR\x05right\x12%\n\x06center\x18\x05\x20\
-    \x02(\x0b2\r.model.WidgetR\x06center\"\xad\x04\n\x08SwipePad\x12-\n\x0bo\
-    n_swipe_up\x18\x01\x20\x02(\x0b2\r.model.LambdaR\tonSwipeUp\x121\n\ron_s\
-    wipe_down\x18\x02\x20\x02(\x0b2\r.model.LambdaR\x0bonSwipeDown\x121\n\ro\
-    n_swipe_left\x18\x03\x20\x02(\x0b2\r.model.LambdaR\x0bonSwipeLeft\x123\n\
-    \x0eon_swipe_right\x18\x04\x20\x02(\x0b2\r.model.LambdaR\x0conSwipeRight\
-    \x12(\n\x08on_click\x18\x05\x20\x02(\x0b2\r.model.LambdaR\x07onClick\x12\
-    ;\n\x12on_bottom_increase\x18\x06\x20\x01(\x0b2\r.model.LambdaR\x10onBot\
-    tomIncrease\x12;\n\x12on_bottom_decrease\x18\x07\x20\x01(\x0b2\r.model.L\
-    ambdaR\x10onBottomDecrease\x125\n\x0fon_bottom_click\x18\x08\x20\x01(\
-    \x0b2\r.model.LambdaR\ronBottomClick\x12=\n\x14bottom_increase_icon\x18\
-    \t\x20\x01(\x0e2\x0b.model.IconR\x12bottomIncreaseIcon\x12=\n\x14bottom_\
-    decrease_icon\x18\n\x20\x01(\x0e2\x0b.model.IconR\x12bottomDecreaseIcon\
-    \"\x92\x01\n\tTextInput\x12(\n\x08on_input\x18\x01\x20\x02(\x0b2\r.model\
-    .LambdaR\x07onInput\x12\x12\n\x04text\x18\x03\x20\x02(\tR\x04text\x12\
-    \x1f\n\x04icon\x18\x02\x20\x01(\x0e2\x0b.model.IconR\x04icon\x12&\n\x04s\
-    ize\x18\x04\x20\x01(\x0e2\x0b.model.Size:\x05SMALLR\x04size\"\x98\x01\n\
-    \x0fTextInputAction\x12\x14\n\x04char\x18\x01\x20\x01(\tH\0R\x04char\x12\
-    \x1e\n\tbackspace\x18\x02\x20\x01(\x08H\0R\tbackspace\x12!\n\x0bcursor_l\
-    eft\x18\x03\x20\x01(\x08H\0R\ncursorLeft\x12#\n\x0ccursor_right\x18\x04\
-    \x20\x01(\x08H\0R\x0bcursorRightB\x07\n\x05inner\"\x92\x01\n\nMenuButton\
-    \x12'\n\x07content\x18\x01\x20\x03(\x0b2\r.model.WidgetR\x07content\x12\
-    \x12\n\x04text\x18\x02\x20\x02(\tR\x04text\x12\x1f\n\x04icon\x18\x03\x20\
-    \x01(\x0e2\x0b.model.IconR\x04icon\x12&\n\x04size\x18\x04\x20\x01(\x0e2\
-    \x0b.model.Size:\x05SMALLR\x04size\"\x07\n\x05Space\"\x84\x06\n\x06Lambd\
-    a\x12\x0e\n\x02id\x18\x01\x20\x01(\tR\x02id\x12\x12\n\x04args\x18\x02\
-    \x20\x03(\tR\x04args\x12%\n\x04http\x18\x03\x20\x01(\x0b2\x0f.model.Http\
-    FuncH\0R\x04http\x12\"\n\x03tcp\x18\x04\x20\x01(\x0b2\x0e.model.TCPFuncH\
-    \0R\x03tcp\x12(\n\x05macro\x18\x05\x20\x01(\x0b2\x10.model.MacroFuncH\0R\
-    \x05macro\x12(\n\x05delay\x18\x06\x20\x01(\x0b2\x10.model.DelayFuncH\0R\
-    \x05delay\x12\"\n\x03ref\x18\x07\x20\x01(\x0b2\x0e.model.RefFuncH\0R\x03\
-    ref\x12:\n\x0bconcatenate\x18\x08\x20\x01(\x0b2\x16.model.ConcatenateFun\
-    cH\0R\x0bconcatenate\x125\n\npush_stack\x18\t\x20\x01(\x0b2\x14.model.Pu\
-    shStackFuncH\0R\tpushStack\x12\x18\n\x06string\x18\n\x20\x01(\tH\0R\x06s\
-    tring\x122\n\tpipe_args\x18\x0b\x20\x01(\x0b2\x13.model.PipeArgsFuncH\0R\
-    \x08pipeArgs\x12>\n\rprepend_stack\x18\x0c\x20\x01(\x0b2\x17.model.Prepe\
-    ndStackFuncH\0R\x0cprependStack\x12+\n\x06switch\x18\r\x20\x01(\x0b2\x11\
-    .model.SwitchFuncH\0R\x06switch\x12/\n\x08is_equal\x18\x0e\x20\x01(\x0b2\
-    \x12.model.IsEqualFuncH\0R\x07isEqual\x12/\n\x08get_prop\x18\x0f\x20\x01\
-    (\x0b2\x12.model.GetPropFuncH\0R\x07getProp\x12\x16\n\x05int32\x18\x10\
-    \x20\x01(\x05H\0R\x05int32\x12\x16\n\x05int64\x18\x11\x20\x01(\x03H\0R\
-    \x05int64\x12\x16\n\x05float\x18\x12\x20\x01(\x02H\0R\x05float\x122\n\tg\
-    et_index\x18\x13\x20\x01(\x0b2\x13.model.GetIndexFuncH\0R\x08getIndexB\
-    \x07\n\x05inner\"G\n\x08HttpFunc\x12\x10\n\x03url\x18\x01\x20\x01(\tR\
-    \x03url\x12)\n\x06method\x18\x03\x20\x01(\x0e2\x11.model.HttpMethodR\x06\
-    method\"=\n\x07TCPFunc\x12\x18\n\x07address\x18\x01\x20\x01(\tR\x07addre\
-    ss\x12\x18\n\x07command\x18\x02\x20\x01(\tR\x07command\"4\n\tMacroFunc\
-    \x12'\n\x07lambdas\x18\x01\x20\x03(\x0b2\r.model.LambdaR\x07lambdas\"7\n\
-    \x0cPipeArgsFunc\x12'\n\x07lambdas\x18\x01\x20\x03(\x0b2\r.model.LambdaR\
-    \x07lambdas\"\x1f\n\tDelayFunc\x12\x12\n\x04time\x18\x01\x20\x01(\x05R\
-    \x04time\"9\n\x07RefFunc\x12\x16\n\x06device\x18\x01\x20\x01(\tR\x06devi\
-    ce\x12\x16\n\x06lambda\x18\x02\x20\x01(\tR\x06lambda\"6\n\rPushStackFunc\
-    \x12%\n\x06lambda\x18\x01\x20\x01(\x0b2\r.model.LambdaR\x06lambda\"9\n\
-    \x10PrependStackFunc\x12%\n\x06lambda\x18\x01\x20\x01(\x0b2\r.model.Lamb\
-    daR\x06lambda\"+\n\x0fConcatenateFunc\x12\x18\n\x07strings\x18\x01\x20\
-    \x03(\tR\x07strings\"O\n\x0bConditional\x12\x1d\n\x02if\x18\x01\x20\x02(\
-    \x0b2\r.model.LambdaR\x02if\x12!\n\x04then\x18\x02\x20\x02(\x0b2\r.model\
-    .LambdaR\x04then\"c\n\nSwitchFunc\x122\n\nconditions\x18\x01\x20\x03(\
-    \x0b2\x12.model.ConditionalR\nconditions\x12!\n\x04else\x18\x02\x20\x01(\
-    \x0b2\r.model.LambdaR\x04else\"\xd1\x02\n\x0bIsEqualFunc\x12!\n\x0bfrom_\
-    string\x18\x01\x20\x01(\tH\0R\nfromString\x12\x1f\n\nfrom_int64\x18\x02\
-    \x20\x01(\x03H\0R\tfromInt64\x12\x1f\n\nfrom_int32\x18\x03\x20\x01(\x05H\
-    \0R\tfromInt32\x12\x1f\n\nfrom_float\x18\x04\x20\x01(\x02H\0R\tfromFloat\
-    \x12\x1d\n\tfrom_bool\x18\x05\x20\x01(\x08H\0R\x08fromBool\x12\x1d\n\tto\
-    _string\x18\x06\x20\x01(\tH\x01R\x08toString\x12\x1b\n\x08to_int64\x18\
-    \x07\x20\x01(\x03H\x01R\x07toInt64\x12\x1b\n\x08to_int32\x18\x08\x20\x01\
-    (\x05H\x01R\x07toInt32\x12\x1b\n\x08to_float\x18\t\x20\x01(\x02H\x01R\
-    \x07toFloat\x12\x19\n\x07to_bool\x18\n\x20\x01(\x08H\x01R\x06toBoolB\x06\
-    \n\x04fromB\x04\n\x02to\"!\n\x0bGetPropFunc\x12\x12\n\x04prop\x18\x01\
-    \x20\x01(\tR\x04prop\"$\n\x0cGetIndexFunc\x12\x14\n\x05index\x18\x01\x20\
-    \x01(\x05R\x05index*(\n\x04Size\x12\t\n\x05SMALL\x10\0\x12\n\n\x06MEDIUM\
-    \x10\x01\x12\t\n\x05LARGE\x10\x02*I\n\nHttpMethod\x12\x07\n\x03GET\x10\0\
-    \x12\x08\n\x04HEAD\x10\x01\x12\x08\n\x04POST\x10\x02\x12\x07\n\x03PUT\
-    \x10\x03\x12\t\n\x05PATCH\x10\x04\x12\n\n\x06DELETE\x10\x05*\xb0\x05\n\
-    \x04Icon\x12\x08\n\x04STAR\x10\0\x12\x0c\n\x08ARROW_UP\x10\x01\x12\x0e\n\
-    \nARROW_DOWN\x10\x02\x12\x0e\n\nARROW_LEFT\x10\x03\x12\x0f\n\x0bARROW_RI\
-    GHT\x10\x04\x12\n\n\x06SELECT\x10\x05\x12\r\n\tVOLUME_UP\x10\x06\x12\x0f\
-    \n\x0bVOLUME_DOWN\x10\x07\x12\x0f\n\x0bVOLUME_MUTE\x10\x08\x12\x08\n\x04\
-    BACK\x10\t\x12\x06\n\x02ON\x10\n\x12\x07\n\x03OFF\x10\x0b\x12\x0b\n\x07F\
-    ORWARD\x10\x0c\x12\x0b\n\x07REVERSE\x10\r\x12\x08\n\x04INFO\x10\x0e\x12\
-    \x08\n\x04HOME\x10\x0f\x12\x0e\n\nCHANNEL_UP\x10\x10\x12\x10\n\x0cCHANNE\
-    L_DOWN\x10\x11\x12\x0b\n\x07CHANNEL\x10\x12\x12\n\n\x06REMOVE\x10\x13\
-    \x12\x08\n\x04STOP\x10\x14\x12\x10\n\x0cSKIP_FORWARD\x10\x15\x12\x10\n\
-    \x0cSKIP_REVERSE\x10\x16\x12\n\n\x06RECORD\x10\x17\x12\t\n\x05PAUSE\x10\
-    \x18\x12\x08\n\x04PLAY\x10\x19\x12\t\n\x05GUIDE\x10\x1a\x12\x07\n\x03DVR\
-    \x10\x1b\x12\x08\n\x04MENU\x10\x1c\x12\x0b\n\x07OPTIONS\x10\x1d\x12\x08\
-    \n\x04EXIT\x10\x1e\x12\x0c\n\x08ASTERISK\x10\x1f\x12\t\n\x05POUND\x10\
-    \x20\x12\x13\n\x0fCLOSED_CAPTIONS\x10!\x12\n\n\x06GARAGE\x10\"\x12\x0b\n\
-    \x07LAUNDRY\x10#\x12\x0b\n\x07KITCHEN\x10$\x12\x08\n\x04NOOK\x10%\x12\
-    \x0f\n\x0bFAMILY_ROOM\x10&\x12\x0f\n\x0bLIVING_ROOM\x10'\x12\x0e\n\nMEDI\
-    A_ROOM\x10(\x12\x0f\n\x0bDINING_ROOM\x10)\x12\t\n\x05ENTRY\x10*\x12\x12\
-    \n\x0eMASTER_BEDROOM\x10+\x12\x11\n\rEXERCISE_ROOM\x10,\x12\r\n\tPLAY_RO\
-    OM\x10-\x12\x0b\n\x07BEDROOM\x10.\x12\x08\n\x04ROOM\x10/\x12\x0c\n\x08ME\
-    NU_ALT\x100\x12\x08\n\x04PLUS\x101\x12\t\n\x05MINUS\x102BR\n&com.pjtsear\
-    ch.opencontroller_lib_protoP\x01Z&pjtsearch.com/opencontroller_lib_proto\
+    \xa6\x01\n\nController\x12!\n\x0cdisplay_name\x18\x01\x20\x02(\tR\x0bdis\
+    playName\x12\x0e\n\x02id\x18\x02\x20\x02(\tR\x02id\x12\x1f\n\x0bbrand_co\
+    lor\x18\x03\x20\x01(\tR\nbrandColor\x12D\n\x11display_interface\x18\x04\
+    \x20\x01(\x0b2\x17.model.DisplayInterfaceR\x10displayInterface\";\n\x10D\
+    isplayInterface\x12'\n\x07widgets\x18\x01\x20\x03(\x0b2\r.model.WidgetR\
+    \x07widgets\"A\n\x06Device\x12\x0e\n\x02id\x18\x01\x20\x02(\tR\x02id\x12\
+    '\n\x07lambdas\x18\x02\x20\x03(\x0b2\r.model.LambdaR\x07lambdas\"\x93\
+    \x03\n\x06Widget\x12\x16\n\x06expand\x18\x01\x20\x01(\x08R\x06expand\x12\
+    '\n\x06button\x18\x02\x20\x01(\x0b2\r.model.ButtonH\0R\x06button\x12\x1e\
+    \n\x03row\x18\x03\x20\x01(\x0b2\n.model.RowH\0R\x03row\x12'\n\x06column\
+    \x18\x04\x20\x01(\x0b2\r.model.ColumnH\0R\x06column\x127\n\x0carrow_layo\
+    ut\x18\x05\x20\x01(\x0b2\x12.model.ArrowLayoutH\0R\x0barrowLayout\x12$\n\
+    \x05space\x18\x06\x20\x01(\x0b2\x0c.model.SpaceH\0R\x05space\x121\n\ntex\
+    t_input\x18\x07\x20\x01(\x0b2\x10.model.TextInputH\0R\ttextInput\x12.\n\
+    \tswipe_pad\x18\x08\x20\x01(\x0b2\x0f.model.SwipePadH\0R\x08swipePad\x12\
+    4\n\x0bmenu_button\x18\t\x20\x01(\x0b2\x11.model.MenuButtonH\0R\nmenuBut\
+    tonB\x07\n\x05inner\"\x8f\x01\n\x06Button\x12(\n\x08on_click\x18\x01\x20\
+    \x02(\x0b2\r.model.LambdaR\x07onClick\x12\x1f\n\x04icon\x18\x02\x20\x01(\
+    \x0e2\x0b.model.IconR\x04icon\x12\x12\n\x04text\x18\x03\x20\x02(\tR\x04t\
+    ext\x12&\n\x04size\x18\x04\x20\x01(\x0e2\x0b.model.Size:\x05SMALLR\x04si\
+    ze\"0\n\x03Row\x12)\n\x08children\x18\x01\x20\x03(\x0b2\r.model.WidgetR\
+    \x08children\"3\n\x06Column\x12)\n\x08children\x18\x01\x20\x03(\x0b2\r.m\
+    odel.WidgetR\x08children\"\xc4\x01\n\x0bArrowLayout\x12\x1f\n\x03top\x18\
+    \x01\x20\x02(\x0b2\r.model.WidgetR\x03top\x12%\n\x06bottom\x18\x02\x20\
+    \x02(\x0b2\r.model.WidgetR\x06bottom\x12!\n\x04left\x18\x03\x20\x02(\x0b\
+    2\r.model.WidgetR\x04left\x12#\n\x05right\x18\x04\x20\x02(\x0b2\r.model.\
+    WidgetR\x05right\x12%\n\x06center\x18\x05\x20\x02(\x0b2\r.model.WidgetR\
+    \x06center\"\xad\x04\n\x08SwipePad\x12-\n\x0bon_swipe_up\x18\x01\x20\x02\
+    (\x0b2\r.model.LambdaR\tonSwipeUp\x121\n\ron_swipe_down\x18\x02\x20\x02(\
+    \x0b2\r.model.LambdaR\x0bonSwipeDown\x121\n\ron_swipe_left\x18\x03\x20\
+    \x02(\x0b2\r.model.LambdaR\x0bonSwipeLeft\x123\n\x0eon_swipe_right\x18\
+    \x04\x20\x02(\x0b2\r.model.LambdaR\x0conSwipeRight\x12(\n\x08on_click\
+    \x18\x05\x20\x02(\x0b2\r.model.LambdaR\x07onClick\x12;\n\x12on_bottom_in\
+    crease\x18\x06\x20\x01(\x0b2\r.model.LambdaR\x10onBottomIncrease\x12;\n\
+    \x12on_bottom_decrease\x18\x07\x20\x01(\x0b2\r.model.LambdaR\x10onBottom\
+    Decrease\x125\n\x0fon_bottom_click\x18\x08\x20\x01(\x0b2\r.model.LambdaR\
+    \ronBottomClick\x12=\n\x14bottom_increase_icon\x18\t\x20\x01(\x0e2\x0b.m\
+    odel.IconR\x12bottomIncreaseIcon\x12=\n\x14bottom_decrease_icon\x18\n\
+    \x20\x01(\x0e2\x0b.model.IconR\x12bottomDecreaseIcon\"\x92\x01\n\tTextIn\
+    put\x12(\n\x08on_input\x18\x01\x20\x02(\x0b2\r.model.LambdaR\x07onInput\
+    \x12\x12\n\x04text\x18\x03\x20\x02(\tR\x04text\x12\x1f\n\x04icon\x18\x02\
+    \x20\x01(\x0e2\x0b.model.IconR\x04icon\x12&\n\x04size\x18\x04\x20\x01(\
+    \x0e2\x0b.model.Size:\x05SMALLR\x04size\"\x98\x01\n\x0fTextInputAction\
+    \x12\x14\n\x04char\x18\x01\x20\x01(\tH\0R\x04char\x12\x1e\n\tbackspace\
+    \x18\x02\x20\x01(\x08H\0R\tbackspace\x12!\n\x0bcursor_left\x18\x03\x20\
+    \x01(\x08H\0R\ncursorLeft\x12#\n\x0ccursor_right\x18\x04\x20\x01(\x08H\0\
+    R\x0bcursorRightB\x07\n\x05inner\"\x92\x01\n\nMenuButton\x12'\n\x07conte\
+    nt\x18\x01\x20\x03(\x0b2\r.model.WidgetR\x07content\x12\x12\n\x04text\
+    \x18\x02\x20\x02(\tR\x04text\x12\x1f\n\x04icon\x18\x03\x20\x01(\x0e2\x0b\
+    .model.IconR\x04icon\x12&\n\x04size\x18\x04\x20\x01(\x0e2\x0b.model.Size\
+    :\x05SMALLR\x04size\"\x07\n\x05Space\"\x84\x06\n\x06Lambda\x12\x0e\n\x02\
+    id\x18\x01\x20\x01(\tR\x02id\x12\x12\n\x04args\x18\x02\x20\x03(\tR\x04ar\
+    gs\x12%\n\x04http\x18\x03\x20\x01(\x0b2\x0f.model.HttpFuncH\0R\x04http\
+    \x12\"\n\x03tcp\x18\x04\x20\x01(\x0b2\x0e.model.TCPFuncH\0R\x03tcp\x12(\
+    \n\x05macro\x18\x05\x20\x01(\x0b2\x10.model.MacroFuncH\0R\x05macro\x12(\
+    \n\x05delay\x18\x06\x20\x01(\x0b2\x10.model.DelayFuncH\0R\x05delay\x12\"\
+    \n\x03ref\x18\x07\x20\x01(\x0b2\x0e.model.RefFuncH\0R\x03ref\x12:\n\x0bc\
+    oncatenate\x18\x08\x20\x01(\x0b2\x16.model.ConcatenateFuncH\0R\x0bconcat\
+    enate\x125\n\npush_stack\x18\t\x20\x01(\x0b2\x14.model.PushStackFuncH\0R\
+    \tpushStack\x12\x18\n\x06string\x18\n\x20\x01(\tH\0R\x06string\x122\n\tp\
+    ipe_args\x18\x0b\x20\x01(\x0b2\x13.model.PipeArgsFuncH\0R\x08pipeArgs\
+    \x12>\n\rprepend_stack\x18\x0c\x20\x01(\x0b2\x17.model.PrependStackFuncH\
+    \0R\x0cprependStack\x12+\n\x06switch\x18\r\x20\x01(\x0b2\x11.model.Switc\
+    hFuncH\0R\x06switch\x12/\n\x08is_equal\x18\x0e\x20\x01(\x0b2\x12.model.I\
+    sEqualFuncH\0R\x07isEqual\x12/\n\x08get_prop\x18\x0f\x20\x01(\x0b2\x12.m\
+    odel.GetPropFuncH\0R\x07getProp\x12\x16\n\x05int32\x18\x10\x20\x01(\x05H\
+    \0R\x05int32\x12\x16\n\x05int64\x18\x11\x20\x01(\x03H\0R\x05int64\x12\
+    \x16\n\x05float\x18\x12\x20\x01(\x02H\0R\x05float\x122\n\tget_index\x18\
+    \x13\x20\x01(\x0b2\x13.model.GetIndexFuncH\0R\x08getIndexB\x07\n\x05inne\
+    r\"G\n\x08HttpFunc\x12\x10\n\x03url\x18\x01\x20\x01(\tR\x03url\x12)\n\
+    \x06method\x18\x03\x20\x01(\x0e2\x11.model.HttpMethodR\x06method\"=\n\
+    \x07TCPFunc\x12\x18\n\x07address\x18\x01\x20\x01(\tR\x07address\x12\x18\
+    \n\x07command\x18\x02\x20\x01(\tR\x07command\"4\n\tMacroFunc\x12'\n\x07l\
+    ambdas\x18\x01\x20\x03(\x0b2\r.model.LambdaR\x07lambdas\"7\n\x0cPipeArgs\
+    Func\x12'\n\x07lambdas\x18\x01\x20\x03(\x0b2\r.model.LambdaR\x07lambdas\
+    \"\x1f\n\tDelayFunc\x12\x12\n\x04time\x18\x01\x20\x01(\x05R\x04time\"9\n\
+    \x07RefFunc\x12\x16\n\x06device\x18\x01\x20\x01(\tR\x06device\x12\x16\n\
+    \x06lambda\x18\x02\x20\x01(\tR\x06lambda\"6\n\rPushStackFunc\x12%\n\x06l\
+    ambda\x18\x01\x20\x01(\x0b2\r.model.LambdaR\x06lambda\"9\n\x10PrependSta\
+    ckFunc\x12%\n\x06lambda\x18\x01\x20\x01(\x0b2\r.model.LambdaR\x06lambda\
+    \"+\n\x0fConcatenateFunc\x12\x18\n\x07strings\x18\x01\x20\x03(\tR\x07str\
+    ings\"O\n\x0bConditional\x12\x1d\n\x02if\x18\x01\x20\x02(\x0b2\r.model.L\
+    ambdaR\x02if\x12!\n\x04then\x18\x02\x20\x02(\x0b2\r.model.LambdaR\x04the\
+    n\"c\n\nSwitchFunc\x122\n\nconditions\x18\x01\x20\x03(\x0b2\x12.model.Co\
+    nditionalR\nconditions\x12!\n\x04else\x18\x02\x20\x01(\x0b2\r.model.Lamb\
+    daR\x04else\"\xd1\x02\n\x0bIsEqualFunc\x12!\n\x0bfrom_string\x18\x01\x20\
+    \x01(\tH\0R\nfromString\x12\x1f\n\nfrom_int64\x18\x02\x20\x01(\x03H\0R\t\
+    fromInt64\x12\x1f\n\nfrom_int32\x18\x03\x20\x01(\x05H\0R\tfromInt32\x12\
+    \x1f\n\nfrom_float\x18\x04\x20\x01(\x02H\0R\tfromFloat\x12\x1d\n\tfrom_b\
+    ool\x18\x05\x20\x01(\x08H\0R\x08fromBool\x12\x1d\n\tto_string\x18\x06\
+    \x20\x01(\tH\x01R\x08toString\x12\x1b\n\x08to_int64\x18\x07\x20\x01(\x03\
+    H\x01R\x07toInt64\x12\x1b\n\x08to_int32\x18\x08\x20\x01(\x05H\x01R\x07to\
+    Int32\x12\x1b\n\x08to_float\x18\t\x20\x01(\x02H\x01R\x07toFloat\x12\x19\
+    \n\x07to_bool\x18\n\x20\x01(\x08H\x01R\x06toBoolB\x06\n\x04fromB\x04\n\
+    \x02to\"!\n\x0bGetPropFunc\x12\x12\n\x04prop\x18\x01\x20\x01(\tR\x04prop\
+    \"$\n\x0cGetIndexFunc\x12\x14\n\x05index\x18\x01\x20\x01(\x05R\x05index*\
+    (\n\x04Size\x12\t\n\x05SMALL\x10\0\x12\n\n\x06MEDIUM\x10\x01\x12\t\n\x05\
+    LARGE\x10\x02*I\n\nHttpMethod\x12\x07\n\x03GET\x10\0\x12\x08\n\x04HEAD\
+    \x10\x01\x12\x08\n\x04POST\x10\x02\x12\x07\n\x03PUT\x10\x03\x12\t\n\x05P\
+    ATCH\x10\x04\x12\n\n\x06DELETE\x10\x05*\xb0\x05\n\x04Icon\x12\x08\n\x04S\
+    TAR\x10\0\x12\x0c\n\x08ARROW_UP\x10\x01\x12\x0e\n\nARROW_DOWN\x10\x02\
+    \x12\x0e\n\nARROW_LEFT\x10\x03\x12\x0f\n\x0bARROW_RIGHT\x10\x04\x12\n\n\
+    \x06SELECT\x10\x05\x12\r\n\tVOLUME_UP\x10\x06\x12\x0f\n\x0bVOLUME_DOWN\
+    \x10\x07\x12\x0f\n\x0bVOLUME_MUTE\x10\x08\x12\x08\n\x04BACK\x10\t\x12\
+    \x06\n\x02ON\x10\n\x12\x07\n\x03OFF\x10\x0b\x12\x0b\n\x07FORWARD\x10\x0c\
+    \x12\x0b\n\x07REVERSE\x10\r\x12\x08\n\x04INFO\x10\x0e\x12\x08\n\x04HOME\
+    \x10\x0f\x12\x0e\n\nCHANNEL_UP\x10\x10\x12\x10\n\x0cCHANNEL_DOWN\x10\x11\
+    \x12\x0b\n\x07CHANNEL\x10\x12\x12\n\n\x06REMOVE\x10\x13\x12\x08\n\x04STO\
+    P\x10\x14\x12\x10\n\x0cSKIP_FORWARD\x10\x15\x12\x10\n\x0cSKIP_REVERSE\
+    \x10\x16\x12\n\n\x06RECORD\x10\x17\x12\t\n\x05PAUSE\x10\x18\x12\x08\n\
+    \x04PLAY\x10\x19\x12\t\n\x05GUIDE\x10\x1a\x12\x07\n\x03DVR\x10\x1b\x12\
+    \x08\n\x04MENU\x10\x1c\x12\x0b\n\x07OPTIONS\x10\x1d\x12\x08\n\x04EXIT\
+    \x10\x1e\x12\x0c\n\x08ASTERISK\x10\x1f\x12\t\n\x05POUND\x10\x20\x12\x13\
+    \n\x0fCLOSED_CAPTIONS\x10!\x12\n\n\x06GARAGE\x10\"\x12\x0b\n\x07LAUNDRY\
+    \x10#\x12\x0b\n\x07KITCHEN\x10$\x12\x08\n\x04NOOK\x10%\x12\x0f\n\x0bFAMI\
+    LY_ROOM\x10&\x12\x0f\n\x0bLIVING_ROOM\x10'\x12\x0e\n\nMEDIA_ROOM\x10(\
+    \x12\x0f\n\x0bDINING_ROOM\x10)\x12\t\n\x05ENTRY\x10*\x12\x12\n\x0eMASTER\
+    _BEDROOM\x10+\x12\x11\n\rEXERCISE_ROOM\x10,\x12\r\n\tPLAY_ROOM\x10-\x12\
+    \x0b\n\x07BEDROOM\x10.\x12\x08\n\x04ROOM\x10/\x12\x0c\n\x08MENU_ALT\x100\
+    \x12\x08\n\x04PLUS\x101\x12\t\n\x05MINUS\x102BR\n&com.pjtsearch.opencont\
+    roller_lib_protoP\x01Z&pjtsearch.com/opencontroller_lib_proto\
 ";
 
 /// `FileDescriptorProto` object which was a source for this generated file
@@ -8522,6 +8652,7 @@ pub fn file_descriptor() -> ::protobuf::reflect::FileDescriptor {
         messages.push(House::generated_message_descriptor_data());
         messages.push(Room::generated_message_descriptor_data());
         messages.push(Controller::generated_message_descriptor_data());
+        messages.push(DisplayInterface::generated_message_descriptor_data());
         messages.push(Device::generated_message_descriptor_data());
         messages.push(Widget::generated_message_descriptor_data());
         messages.push(Button::generated_message_descriptor_data());
