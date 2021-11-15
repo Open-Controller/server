@@ -55,14 +55,14 @@ async fn main() -> Result<()> {
         .init();
 
     let bytes = fs::read(&opts.input).context("Could not read file")?;
-    House::parse_from_bytes(&bytes).context("Invalid file")?;
+    Module::parse_from_bytes(&bytes).context("Invalid file")?;
     *HOUSE.lock().unwrap() = Some(bytes);
 
     let mut input_watcher = Hotwatch::new().context("Hotwatch failed to initialize")?;
     input_watcher.watch(&opts.input, |event: Event| {
         if let Event::Write(path) = event {
             let bytes = fs::read(path).expect("Could not read file");
-            House::parse_from_bytes(&bytes).expect("Invalid file");
+            Module::parse_from_bytes(&bytes).expect("Invalid file");
             *HOUSE.lock().unwrap() = Some(bytes);
             info!("Reloaded file");
         }
