@@ -78,8 +78,9 @@ async fn main() -> Result<()> {
 #[cfg(test)]
 mod tests {
     use assert_cmd::prelude::*;
+    use async_std::task::sleep;
     use predicates::prelude::*;
-    use std::{fs, process::Command};
+    use std::{fs, process::Command, time::Duration};
 
     #[test]
     fn file_doesnt_exist() -> Result<(), Box<dyn std::error::Error>> {
@@ -100,6 +101,8 @@ mod tests {
         cmd.arg("./test/house.ocbin");
         let mut child = cmd.spawn()?;
         
+        sleep(Duration::from_millis(300)).await;
+
         let bytes = surf::get("http://0.0.0.0:3612").recv_bytes().await?;
         child.kill()?;
 
