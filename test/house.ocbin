@@ -1,51 +1,4170 @@
 
-α
-testRoomΤ
-η
-testControllerTemplateΜ
-
-testDeviceTemplatexvt
-baseljj
-h
-
-testActionZXVT
-)'
-
-
-	getLambda
-
-std"httpRequest 
-
-
-add
-
-base	"/images"GETΈµ
+΅­
+nook—­
+J
+roku–J“J
+%
+controller-templates/Roku.ocdefιI
+id
 name
-base¦Z£
-
-
-name	"#00ffff‹b
-…r‚buttonX
-onClickMKIG
-EC
+roku
+tv
+matrix
+matrixOutput
+matrixInput
+audioReceiver
+audioReceiverZone
+audioReceiverOutputψH
+%
+controller-templates/Roku.ocdefbΞH
+-
+%
+controller-templates/Roku.ocdef
+id/
+%
+controller-templates/Roku.ocdef
+name0
+%
+controller-templates/Roku.ocdef*#be75d0"ΉG
+%
+controller-templates/Roku.ocdefjG
+…%
+%
+controller-templates/Roku.ocdefzΫ$row"©z¦row"κzηbutton‰
+onClickύ
+%
+controller-templates/Roku.ocdef&ΣΠ
+%
+controller-templates/Roku.ocdef,"¦
+u
+%
+controller-templates/Roku.ocdef-"L
+
+	getLambda/
+%
+controller-templates/Roku.ocdef-
+roku
+*keypress-
+%
+controller-templates/Roku.ocdef;*Home
+text*Home1
+size)
+%
+controller-templates/Roku.ocdef#8
+icon*HOME"±	z®		textinput
+text
+*Keyboard
+icon
+*ARROW_UPΕ
+onInputΉ
+%
+controller-templates/Roku.ocdef&
+keyEvent‚
+%
+controller-templates/Roku.ocdef!"Ψ
+u
+%
+controller-templates/Roku.ocdef""L
+
+	getLambda/
+%
+controller-templates/Roku.ocdef"
+roku
+*keypressή
+%
+controller-templates/Roku.ocdef%"΄
+–
+%
+controller-templates/Roku.ocdef&"μ
+0
+%
+controller-templates/Roku.ocdef'
+mapOr2
+%
+controller-templates/Roku.ocdef)*	Backspaceƒ
+%
+controller-templates/Roku.ocdef)Ω
+charΠ
+%
+controller-templates/Roku.ocdef3‚¥
+µ
+%
+controller-templates/Roku.ocdef6"‹
+,
+%
+controller-templates/Roku.ocdef7
+=/
+%
+controller-templates/Roku.ocdef9
+char*
+%
+controller-templates/Roku.ocdef>* 0
+%
+controller-templates/Roku.ocdef-*Lit_%20"Έ
+%
+controller-templates/Roku.ocdef-"
+,
+%
+controller-templates/Roku.ocdef.
++-
+%
+controller-templates/Roku.ocdef0*Lit_/
+%
+controller-templates/Roku.ocdef8
+char
+%
+controller-templates/Roku.ocdef)"o
+	
+index3
+%
+controller-templates/Roku.ocdef)
 
-
-	getLambda$"
-
-
-testDeviceTemplate
-
-base"
-testAction
-text"Test
-icon"ROOMhRf
-"	Test RoomO
-testGE
-
+keyEvent-
+%
+controller-templates/Roku.ocdef2*char1
+size)
+%
+controller-templates/Roku.ocdef #8"§z¤row"z™buttongroup1
+size)
+%
+controller-templates/Roku.ocdef$,8"¨z¥button
+icon*OFF
+text*	Power Offφ
+onClickκ
+%
+controller-templates/Roku.ocdef&*ΐ½
+%
+controller-templates/Roku.ocdef&0"“
+5
+%
+controller-templates/Roku.ocdef&1
+
+runEffects
+%
+controller-templates/Roku.ocdef'%ζγ
+%
+controller-templates/Roku.ocdef'+"Ή
+y
+%
+controller-templates/Roku.ocdef',"P
+
+	getLambda8
+%
+controller-templates/Roku.ocdef',
+audioReceiver*off<
+%
+controller-templates/Roku.ocdef'>
+audioReceiverZoneΖ
+%
+controller-templates/Roku.ocdef(%™
+%
+controller-templates/Roku.ocdef(+"p
+n
+%
+controller-templates/Roku.ocdef(,"E
+
+	getLambda-
+%
+controller-templates/Roku.ocdef(,
+tv*off"«z¨buttonϋ
+onClickο
+%
+controller-templates/Roku.ocdef.*ΕΒ
+%
+controller-templates/Roku.ocdef.0"
+5
+%
+controller-templates/Roku.ocdef.1
+
+runEffectsΕ
+%
+controller-templates/Roku.ocdef/%›
+%
+controller-templates/Roku.ocdef/+"o
+m
+%
+controller-templates/Roku.ocdef/,"D
+
+	getLambda-
+%
+controller-templates/Roku.ocdef/,
+tv*on΄
+%
+controller-templates/Roku.ocdef0%‡
+%
+controller-templates/Roku.ocdef0+"^
+0
+%
+controller-templates/Roku.ocdef0,
+delay*
+%
+controller-templates/Roku.ocdef028ΘΌ
+%
+controller-templates/Roku.ocdef1%’
+%
+controller-templates/Roku.ocdef1+"ε
+r
+%
+controller-templates/Roku.ocdef1,"I
+
+	getLambda1
+%
+controller-templates/Roku.ocdef1,
+matrix*set7
+%
+controller-templates/Roku.ocdef17
+matrixOutput6
+%
+controller-templates/Roku.ocdef1D
+matrixInput΄
+%
+controller-templates/Roku.ocdef2%‡
+%
+controller-templates/Roku.ocdef2+"^
+0
+%
+controller-templates/Roku.ocdef2,
+delay*
+%
+controller-templates/Roku.ocdef228Θ
+%
+controller-templates/Roku.ocdef3%εβ
+%
+controller-templates/Roku.ocdef3+"Έ
+x
+%
+controller-templates/Roku.ocdef3,"O
+
+	getLambda8
+%
+controller-templates/Roku.ocdef3,
+audioReceiver*on<
+%
+controller-templates/Roku.ocdef3=
+audioReceiverZone΄
+%
+controller-templates/Roku.ocdef4%‡
+%
+controller-templates/Roku.ocdef4+"^
+0
+%
+controller-templates/Roku.ocdef4,
+delay*
+%
+controller-templates/Roku.ocdef428ΘΠ
+%
+controller-templates/Roku.ocdef5%¦£
+%
+controller-templates/Roku.ocdef5+"ω
+y
+%
+controller-templates/Roku.ocdef5,"P
+
+	getLambda8
+%
+controller-templates/Roku.ocdef5,
+audioReceiver*set<
+%
+controller-templates/Roku.ocdef5>
+audioReceiverZone>
+%
+controller-templates/Roku.ocdef5P
+audioReceiverOutput΄
+%
+controller-templates/Roku.ocdef6%‡
+%
+controller-templates/Roku.ocdef6+"^
+0
+%
+controller-templates/Roku.ocdef6,
+delay*
+%
+controller-templates/Roku.ocdef628Θ–
+%
+controller-templates/Roku.ocdef7%μι
+%
+controller-templates/Roku.ocdef7+"Ώ
+
+%
+controller-templates/Roku.ocdef7,"V
+
+	getLambda8
+%
+controller-templates/Roku.ocdef7,
+audioReceiver*	volumeSet<
+%
+controller-templates/Roku.ocdef7D
+audioReceiverZone
+icon*ON
+text
+*Power On
+‡
+%
+controller-templates/Roku.ocdef?zέswipepad
+onSwipeRightώ
+%
+controller-templates/Roku.ocdefH#ΤΡ
+%
+controller-templates/Roku.ocdefI"§
+u
+%
+controller-templates/Roku.ocdefI"L
+
+	getLambda/
+%
+controller-templates/Roku.ocdefI
+roku
+*keypress.
+%
+controller-templates/Roku.ocdefI(*Right
+onSwipeLeftύ
+%
+controller-templates/Roku.ocdefE"ΣΠ
+%
+controller-templates/Roku.ocdefF"¦
+u
+%
+controller-templates/Roku.ocdefF"L
+
+	getLambda/
+%
+controller-templates/Roku.ocdefF
+roku
+*keypress-
+%
+controller-templates/Roku.ocdefF(*Left!
+bottomIncreaseIcon*	VOLUME_UP‰
+	onSwipeUpϋ
+%
+controller-templates/Roku.ocdefA ΡΞ
+%
+controller-templates/Roku.ocdefA&"¤
+u
+%
+controller-templates/Roku.ocdefA'"L
+
+	getLambda/
+%
+controller-templates/Roku.ocdefA'
+roku
+*keypress+
+%
+controller-templates/Roku.ocdefA5*Upª
+onBottomIncrease•
+%
+controller-templates/Roku.ocdefN'λθ
+%
+controller-templates/Roku.ocdefO"Ύ
+~
+%
+controller-templates/Roku.ocdefO"U
+
+	getLambda8
+%
+controller-templates/Roku.ocdefO
+audioReceiver
+*volumeUp<
+%
+controller-templates/Roku.ocdefO1
+audioReceiverZone
+onSwipeDownύ
+%
+controller-templates/Roku.ocdefB"ΣΠ
+%
+controller-templates/Roku.ocdefC"¦
+u
+%
+controller-templates/Roku.ocdefC"L
+
+	getLambda/
+%
+controller-templates/Roku.ocdefC
+roku
+*keypress-
+%
+controller-templates/Roku.ocdefC(*Down­
+onBottomDecrease
+%
+controller-templates/Roku.ocdefQ'ξλ
+%
+controller-templates/Roku.ocdefR"Α
+€
+%
+controller-templates/Roku.ocdefR"W
+
+	getLambda8
+%
+controller-templates/Roku.ocdefR
+audioReceiver*
+volumeDown<
+%
+controller-templates/Roku.ocdefR3
+audioReceiverZone3
+expand)
+%
+controller-templates/Roku.ocdef@Hª
+onBottomClick
+%
+controller-templates/Roku.ocdefT$ξλ
+%
+controller-templates/Roku.ocdefU"Α
+€
+%
+controller-templates/Roku.ocdefU"W
+
+	getLambda8
+%
+controller-templates/Roku.ocdefU
+audioReceiver*
+volumeMute<
+%
+controller-templates/Roku.ocdefU3
+audioReceiverZone#
+bottomDecreaseIcon*VOLUME_DOWN‹
+onClickÿ
+%
+controller-templates/Roku.ocdefKΥÒ
+%
+controller-templates/Roku.ocdefL"¨
+u
+%
+controller-templates/Roku.ocdefL"L
+
+	getLambda/
+%
+controller-templates/Roku.ocdefL
+roku
+*keypress/
+%
+controller-templates/Roku.ocdefL(*Select
+ϊ
+%
+controller-templates/Roku.ocdefZzΠrow"ιzζcolumn"ξzλbutton
+onClickό
+%
+controller-templates/Roku.ocdef]&ÒΟ
+%
+controller-templates/Roku.ocdef],"¥
+u
+%
+controller-templates/Roku.ocdef]-"L
+
+	getLambda/
+%
+controller-templates/Roku.ocdef]-
+roku
+*keypress,
+%
+controller-templates/Roku.ocdef];*Rev
+icon	*REVERSE1
+size)
+%
+controller-templates/Roku.ocdef`#8
+text*Rewind"κzηbutton‰
+onClickύ
+%
+controller-templates/Roku.ocdefc&ΣΠ
+%
+controller-templates/Roku.ocdefc,"¦
+u
+%
+controller-templates/Roku.ocdefc-"L
+
+	getLambda/
+%
+controller-templates/Roku.ocdefc-
+roku
+*keypress-
+%
+controller-templates/Roku.ocdefc;*Back
+text*Back1
+size)
+%
+controller-templates/Roku.ocdeff#8
+icon*BACK"κzηbutton
+icon*PLAY
+text*Play1
+size)
+%
+controller-templates/Roku.ocdefm8‰
+onClickύ
+%
+controller-templates/Roku.ocdefj"ΣΠ
+%
+controller-templates/Roku.ocdefj("¦
+u
+%
+controller-templates/Roku.ocdefj)"L
+
+	getLambda/
+%
+controller-templates/Roku.ocdefj)
+roku
+*keypress-
+%
+controller-templates/Roku.ocdefj7*Play"οzμcolumn"τzρbutton
+onClickό
+%
+controller-templates/Roku.ocdefq&ÒΟ
+%
+controller-templates/Roku.ocdefq,"¥
+u
+%
+controller-templates/Roku.ocdefq-"L
+
+	getLambda/
+%
+controller-templates/Roku.ocdefq-
+roku
+*keypress,
+%
+controller-templates/Roku.ocdefq;*Fwd
+icon	*FORWARD
+text*Fast Forward1
+size)
+%
+controller-templates/Roku.ocdeft#8"κzηbutton
+text*Info‰
+onClickύ
+%
+controller-templates/Roku.ocdefw&ΣΠ
+%
+controller-templates/Roku.ocdefw,"¦
+u
+%
+controller-templates/Roku.ocdefw-"L
+
+	getLambda/
+%
+controller-templates/Roku.ocdefw-
+roku
+*keypress-
+%
+controller-templates/Roku.ocdefw;*Info
+icon*INFO1
+size)
+%
+controller-templates/Roku.ocdefz#8
+μπ
+devicesίπ
+‘
+roku…
+!
+device-templates/Roku.ocdefί
+baseΦ
+!
+device-templates/Roku.ocdefr°
+­
+keypress 
+!
+device-templates/Roku.ocdefϊ
+keyς
+!
+device-templates/Roku.ocdef "Μ
+o
+!
+device-templates/Roku.ocdef!"J
+
+	getLambda*
+!
+device-templates/Roku.ocdef!
+std*httpRequest­
+!
+device-templates/Roku.ocdef1"‡
+(
+!
+device-templates/Roku.ocdef2
+++
+!
+device-templates/Roku.ocdef4
+base­
+!
+device-templates/Roku.ocdef9"‡
+(
+!
+device-templates/Roku.ocdef:
++/
+!
+device-templates/Roku.ocdef<*
+/keypress/*
+!
+device-templates/Roku.ocdefI
+key)
+!
+device-templates/Roku.ocdefO*POST
+Ό
+matrix±®
+#
+device-templates/Matrix.ocdef†
+host
+portχ
+#
+device-templates/Matrix.ocdefrΟ
+Μ
+setΔ
+#
+device-templates/Matrix.ocdef
+output
+input
+#
+device-templates/Matrix.ocdef%"β
+r
+#
+device-templates/Matrix.ocdef&"K
+
+	getLambda,
+#
+device-templates/Matrix.ocdef&
+std*
+tcpRequest³
+#
+device-templates/Matrix.ocdef"‹
+*
+#
+device-templates/Matrix.ocdef
++-
+#
+device-templates/Matrix.ocdef
+host­
+#
+device-templates/Matrix.ocdef"…
+*
+#
+device-templates/Matrix.ocdef
++(
+#
+device-templates/Matrix.ocdef*:-
+#
+device-templates/Matrix.ocdef 
+portµ
+#
+device-templates/Matrix.ocdef"
+*
+#
+device-templates/Matrix.ocdef
++/
+#
+device-templates/Matrix.ocdef
+output.
+#
+device-templates/Matrix.ocdef
+input
+α
+tvΪΧ
+
+device-templates/TV.ocdef³
+host
+port
+address›
+
+device-templates/TV.ocdefrχ
+Π
+onΙ
+
+device-templates/TV.ocdef¥Ά
+
+device-templates/TV.ocdef"ώ
+j
+
+device-templates/TV.ocdef"G
+
+	getLambda(
+
+device-templates/TV.ocdef
+std*
+tcpRequest–
+
+device-templates/TV.ocdef"ς
+&
+
+device-templates/TV.ocdef
++)
+
+device-templates/TV.ocdef
+host
+
+device-templates/TV.ocdef"y
+&
+
+device-templates/TV.ocdef
++$
+
+device-templates/TV.ocdef*:)
+
+device-templates/TV.ocdef 
+portφ
+
+device-templates/TV.ocdef"Ò
+&
+
+device-templates/TV.ocdef
++*
+
+device-templates/TV.ocdef*sendir,ϋ
+
+device-templates/TV.ocdef"Χ
+&
+
+device-templates/TV.ocdef
++,
+
+device-templates/TV.ocdef!	
+address
+
+device-templates/TV.ocdef)*\,1,40000,3,1,96,24,24,24,48,24,48,24,48,24,24,24,48,24,24,24,48,24,24,24,24,24,24,24,24,1013
+΅
+off™
+
+device-templates/TV.ocdefυς
+
+device-templates/TV.ocdef"Ξ
+j
+
+device-templates/TV.ocdef"G
+
+	getLambda(
+
+device-templates/TV.ocdef
+std*
+tcpRequest–
+
+device-templates/TV.ocdef	"ς
+&
+
+device-templates/TV.ocdef	
++)
+
+device-templates/TV.ocdef	
+host
+
+device-templates/TV.ocdef	"y
+&
+
+device-templates/TV.ocdef	
++$
+
+device-templates/TV.ocdef	*:)
+
+device-templates/TV.ocdef	 
+portΖ
+
+device-templates/TV.ocdef
+"Ά
+&
+
+device-templates/TV.ocdef
+
++*
+
+device-templates/TV.ocdef
+*sendir,Λ
+
+device-templates/TV.ocdef
+"§
+&
+
+device-templates/TV.ocdef
+
++,
+
+device-templates/TV.ocdef
+!	
+addressΞ
+
+device-templates/TV.ocdef
+)*ª,2,40000,1,1,96,24,48,24,48,24,48,24,48,24,24,24,48,24,24,24,48,24,24,24,24,24,24,24,24,990,96,24,48,24,48,24,48,24,48,24,24,24,48,24,24,24,48,24,24,24,24,24,24,24,24,990
+θ5
+audioReceiverΦ5Σ5
+*
+$device-templates/AudioReceiver.ocdef¤5
+host
+port•5
+*
+$device-templates/AudioReceiver.ocdefrζ4
+»
+on΄
+*
+$device-templates/AudioReceiver.ocdef…
+zoneό
+*
+$device-templates/AudioReceiver.ocdef"Ν
+€
+*
+$device-templates/AudioReceiver.ocdef"R
+
+	getLambda3
+*
+$device-templates/AudioReceiver.ocdef
+std*
+tcpRequestδ
+*
+$device-templates/AudioReceiver.ocdef	"µ
+1
+*
+$device-templates/AudioReceiver.ocdef	
++4
+*
+$device-templates/AudioReceiver.ocdef	
+hostΙ
+*
+$device-templates/AudioReceiver.ocdef	"
+1
+*
+$device-templates/AudioReceiver.ocdef	
++/
+*
+$device-templates/AudioReceiver.ocdef	*:4
+*
+$device-templates/AudioReceiver.ocdef	 
+portΰ
+*
+$device-templates/AudioReceiver.ocdef
+"±
+1
+*
+$device-templates/AudioReceiver.ocdef
+
++/
+*
+$device-templates/AudioReceiver.ocdef
+*ZΚ
+*
+$device-templates/AudioReceiver.ocdef
+"›
+1
+*
+$device-templates/AudioReceiver.ocdef
+
++4
+*
+$device-templates/AudioReceiver.ocdef
+
+zone0
+*
+$device-templates/AudioReceiver.ocdef
+ *ON
+Μ
+setΔ
+*
+$device-templates/AudioReceiver.ocdef•
+zone
+settingƒ
+*
+$device-templates/AudioReceiver.ocdef%"Τ
+€
+*
+$device-templates/AudioReceiver.ocdef&"R
+
+	getLambda3
+*
+$device-templates/AudioReceiver.ocdef&
+std*
+tcpRequestδ
+*
+$device-templates/AudioReceiver.ocdef"µ
+1
+*
+$device-templates/AudioReceiver.ocdef
++4
+*
+$device-templates/AudioReceiver.ocdef
+hostΙ
+*
+$device-templates/AudioReceiver.ocdef"
+1
+*
+$device-templates/AudioReceiver.ocdef
++/
+*
+$device-templates/AudioReceiver.ocdef*:4
+*
+$device-templates/AudioReceiver.ocdef 
+portη
+*
+$device-templates/AudioReceiver.ocdef"Έ
+1
+*
+$device-templates/AudioReceiver.ocdef
++/
+*
+$device-templates/AudioReceiver.ocdef*ZΡ
+*
+$device-templates/AudioReceiver.ocdef"Ά
+1
+*
+$device-templates/AudioReceiver.ocdef
++4
+*
+$device-templates/AudioReceiver.ocdef
+zone7
+*
+$device-templates/AudioReceiver.ocdef 	
+setting
+Ε
+
+volumeMute¶
+*
+$device-templates/AudioReceiver.ocdef‡
+zoneώ
+*
+$device-templates/AudioReceiver.ocdef#"Ο
+€
+*
+$device-templates/AudioReceiver.ocdef$"R
+
+	getLambda3
+*
+$device-templates/AudioReceiver.ocdef$
+std*
+tcpRequestδ
+*
+$device-templates/AudioReceiver.ocdef"µ
+1
+*
+$device-templates/AudioReceiver.ocdef
++4
+*
+$device-templates/AudioReceiver.ocdef
+hostΙ
+*
+$device-templates/AudioReceiver.ocdef"
+1
+*
+$device-templates/AudioReceiver.ocdef
++/
+*
+$device-templates/AudioReceiver.ocdef*:4
+*
+$device-templates/AudioReceiver.ocdef 
+portβ
+*
+$device-templates/AudioReceiver.ocdef"³
+1
+*
+$device-templates/AudioReceiver.ocdef
++/
+*
+$device-templates/AudioReceiver.ocdef*ZΜ
+*
+$device-templates/AudioReceiver.ocdef"
+1
+*
+$device-templates/AudioReceiver.ocdef
++4
+*
+$device-templates/AudioReceiver.ocdef
+zone2
+*
+$device-templates/AudioReceiver.ocdef *MUON
+Α
+volumeUp΄
+*
+$device-templates/AudioReceiver.ocdef…
+zoneό
+*
+$device-templates/AudioReceiver.ocdef!"Ν
+€
+*
+$device-templates/AudioReceiver.ocdef""R
+
+	getLambda3
+*
+$device-templates/AudioReceiver.ocdef"
+std*
+tcpRequestδ
+*
+$device-templates/AudioReceiver.ocdef"µ
+1
+*
+$device-templates/AudioReceiver.ocdef
++4
+*
+$device-templates/AudioReceiver.ocdef
+hostΙ
+*
+$device-templates/AudioReceiver.ocdef"
+1
+*
+$device-templates/AudioReceiver.ocdef
++/
+*
+$device-templates/AudioReceiver.ocdef*:4
+*
+$device-templates/AudioReceiver.ocdef 
+portΰ
+*
+$device-templates/AudioReceiver.ocdef"±
+1
+*
+$device-templates/AudioReceiver.ocdef
++/
+*
+$device-templates/AudioReceiver.ocdef*ZΚ
+*
+$device-templates/AudioReceiver.ocdef"›
+1
+*
+$device-templates/AudioReceiver.ocdef
++4
+*
+$device-templates/AudioReceiver.ocdef
+zone0
+*
+$device-templates/AudioReceiver.ocdef *UP
+Β
+	volumeSet΄
+*
+$device-templates/AudioReceiver.ocdef…
+zoneό
+*
+$device-templates/AudioReceiver.ocdef""Ν
+€
+*
+$device-templates/AudioReceiver.ocdef#"R
+
+	getLambda3
+*
+$device-templates/AudioReceiver.ocdef#
+std*
+tcpRequestδ
+*
+$device-templates/AudioReceiver.ocdef"µ
+1
+*
+$device-templates/AudioReceiver.ocdef
++4
+*
+$device-templates/AudioReceiver.ocdef
+hostΙ
+*
+$device-templates/AudioReceiver.ocdef"
+1
+*
+$device-templates/AudioReceiver.ocdef
++/
+*
+$device-templates/AudioReceiver.ocdef*:4
+*
+$device-templates/AudioReceiver.ocdef 
+portΰ
+*
+$device-templates/AudioReceiver.ocdef"±
+1
+*
+$device-templates/AudioReceiver.ocdef
++/
+*
+$device-templates/AudioReceiver.ocdef*ZΚ
+*
+$device-templates/AudioReceiver.ocdef"›
+1
+*
+$device-templates/AudioReceiver.ocdef
++4
+*
+$device-templates/AudioReceiver.ocdef
+zone0
+*
+$device-templates/AudioReceiver.ocdef *40
+½
+offµ
+*
+$device-templates/AudioReceiver.ocdef†
+zoneύ
+*
+$device-templates/AudioReceiver.ocdef"Ξ
+€
+*
+$device-templates/AudioReceiver.ocdef"R
+
+	getLambda3
+*
+$device-templates/AudioReceiver.ocdef
+std*
+tcpRequestδ
+*
+$device-templates/AudioReceiver.ocdef"µ
+1
+*
+$device-templates/AudioReceiver.ocdef
++4
+*
+$device-templates/AudioReceiver.ocdef
+hostΙ
+*
+$device-templates/AudioReceiver.ocdef"
+1
+*
+$device-templates/AudioReceiver.ocdef
++/
+*
+$device-templates/AudioReceiver.ocdef*:4
+*
+$device-templates/AudioReceiver.ocdef 
+portα
+*
+$device-templates/AudioReceiver.ocdef"²
+1
+*
+$device-templates/AudioReceiver.ocdef
++/
+*
+$device-templates/AudioReceiver.ocdef*ZΛ
+*
+$device-templates/AudioReceiver.ocdef"
+1
+*
+$device-templates/AudioReceiver.ocdef
++4
+*
+$device-templates/AudioReceiver.ocdef
+zone1
+*
+$device-templates/AudioReceiver.ocdef *OFF
+Ε
+
+volumeDown¶
+*
+$device-templates/AudioReceiver.ocdef‡
+zoneώ
+*
+$device-templates/AudioReceiver.ocdef#"Ο
+€
+*
+$device-templates/AudioReceiver.ocdef$"R
+
+	getLambda3
+*
+$device-templates/AudioReceiver.ocdef$
+std*
+tcpRequestδ
+*
+$device-templates/AudioReceiver.ocdef"µ
+1
+*
+$device-templates/AudioReceiver.ocdef
++4
+*
+$device-templates/AudioReceiver.ocdef
+hostΙ
+*
+$device-templates/AudioReceiver.ocdef"
+1
+*
+$device-templates/AudioReceiver.ocdef
++/
+*
+$device-templates/AudioReceiver.ocdef*:4
+*
+$device-templates/AudioReceiver.ocdef 
+portβ
+*
+$device-templates/AudioReceiver.ocdef"³
+1
+*
+$device-templates/AudioReceiver.ocdef
++/
+*
+$device-templates/AudioReceiver.ocdef*ZΜ
+*
+$device-templates/AudioReceiver.ocdef"
+1
+*
+$device-templates/AudioReceiver.ocdef
++4
+*
+$device-templates/AudioReceiver.ocdef
+zone2
+*
+$device-templates/AudioReceiver.ocdef *DOWN
+μ“
+fiosβ“ή“
+!
+device-templates/FiOS.ocdef·“
+host
+port
+address“
+!
+device-templates/FiOS.ocdefrχ’
+²
+previous¥
+!
+device-templates/FiOS.ocdefDÿό
+!
+device-templates/FiOS.ocdefD"Φ
+n
+!
+device-templates/FiOS.ocdefD"I
+
+	getLambda*
+!
+device-templates/FiOS.ocdefD
+std*
+tcpRequest¤
+!
+device-templates/FiOS.ocdefE"ώ
+(
+!
+device-templates/FiOS.ocdefE
+++
+!
+device-templates/FiOS.ocdefE
+host¤
+!
+device-templates/FiOS.ocdefE"
+(
+!
+device-templates/FiOS.ocdefE
++&
+!
+device-templates/FiOS.ocdefE*:+
+!
+device-templates/FiOS.ocdefE 
+portΌ
+!
+device-templates/FiOS.ocdefF"–
+(
+!
+device-templates/FiOS.ocdefF
++,
+!
+device-templates/FiOS.ocdefF*sendir,»
+!
+device-templates/FiOS.ocdefF"•
+(
+!
+device-templates/FiOS.ocdefF
++.
+!
+device-templates/FiOS.ocdefF!	
+addressΈ
+!
+device-templates/FiOS.ocdefF)*’,17,38000,1,37,343,172,18,86,18,86,18,172,18,172,18,172,18,172,18,86,18,86,18,86,18,86,18,86,18,86,18,172,18,86,18,86,18,86,18,1182,343,86,18,3371
+°
+rewind¥
+!
+device-templates/FiOS.ocdefJÿό
+!
+device-templates/FiOS.ocdefJ"Φ
+n
+!
+device-templates/FiOS.ocdefJ"I
+
+	getLambda*
+!
+device-templates/FiOS.ocdefJ
+std*
+tcpRequest¤
+!
+device-templates/FiOS.ocdefK"ώ
+(
+!
+device-templates/FiOS.ocdefK
+++
+!
+device-templates/FiOS.ocdefK
+host¤
+!
+device-templates/FiOS.ocdefK"
+(
+!
+device-templates/FiOS.ocdefK
++&
+!
+device-templates/FiOS.ocdefK*:+
+!
+device-templates/FiOS.ocdefK 
+portΌ
+!
+device-templates/FiOS.ocdefL"–
+(
+!
+device-templates/FiOS.ocdefL
++,
+!
+device-templates/FiOS.ocdefL*sendir,»
+!
+device-templates/FiOS.ocdefL"•
+(
+!
+device-templates/FiOS.ocdefL
++.
+!
+device-templates/FiOS.ocdefL!	
+addressΈ
+!
+device-templates/FiOS.ocdefL)*’,19,38000,1,37,343,172,18,86,18,172,18,172,18,172,18,172,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,172,18,86,18,86,18,86,18,1182,343,86,18,3371
+―
+delete¤
+!
+device-templates/FiOS.ocdef6ώϋ
+!
+device-templates/FiOS.ocdef6"Υ
+n
+!
+device-templates/FiOS.ocdef6"I
+
+	getLambda*
+!
+device-templates/FiOS.ocdef6
+std*
+tcpRequest¤
+!
+device-templates/FiOS.ocdef7"ώ
+(
+!
+device-templates/FiOS.ocdef7
+++
+!
+device-templates/FiOS.ocdef7
+host¤
+!
+device-templates/FiOS.ocdef7"
+(
+!
+device-templates/FiOS.ocdef7
++&
+!
+device-templates/FiOS.ocdef7*:+
+!
+device-templates/FiOS.ocdef7 
+port»
+!
+device-templates/FiOS.ocdef8"•
+(
+!
+device-templates/FiOS.ocdef8
++,
+!
+device-templates/FiOS.ocdef8*sendir,Ί
+!
+device-templates/FiOS.ocdef8"”
+(
+!
+device-templates/FiOS.ocdef8
++.
+!
+device-templates/FiOS.ocdef8!	
+address·
+!
+device-templates/FiOS.ocdef8)*‘,38,38000,1,37,343,172,18,86,18,86,18,86,18,172,18,86,18,172,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,172,18,172,18,86,18,1267,343,86,18,3371
+±
+right§
+!
+device-templates/FiOS.ocdefώ
+!
+device-templates/FiOS.ocdef"Ψ
+n
+!
+device-templates/FiOS.ocdef"I
+
+	getLambda*
+!
+device-templates/FiOS.ocdef
+std*
+tcpRequest¤
+!
+device-templates/FiOS.ocdef"ώ
+(
+!
+device-templates/FiOS.ocdef
+++
+!
+device-templates/FiOS.ocdef
+host¤
+!
+device-templates/FiOS.ocdef"
+(
+!
+device-templates/FiOS.ocdef
++&
+!
+device-templates/FiOS.ocdef*:+
+!
+device-templates/FiOS.ocdef 
+portΎ
+!
+device-templates/FiOS.ocdef "
+(
+!
+device-templates/FiOS.ocdef 
++,
+!
+device-templates/FiOS.ocdef *sendir,½
+!
+device-templates/FiOS.ocdef "—
+(
+!
+device-templates/FiOS.ocdef 
++.
+!
+device-templates/FiOS.ocdef !	
+addressΊ
+!
+device-templates/FiOS.ocdef )*”,10,38000,1,37,343,172,18,172,18,172,18,172,18,86,18,172,18,172,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,172,18,172,18,86,18,1010,343,86,18,3371
+ª
+on£
+!
+device-templates/FiOS.ocdefύϊ
+!
+device-templates/FiOS.ocdef"Τ
+n
+!
+device-templates/FiOS.ocdef"I
+
+	getLambda*
+!
+device-templates/FiOS.ocdef
+std*
+tcpRequest¤
+!
+device-templates/FiOS.ocdef"ώ
+(
+!
+device-templates/FiOS.ocdef
+++
+!
+device-templates/FiOS.ocdef
+host¤
+!
+device-templates/FiOS.ocdef"
+(
+!
+device-templates/FiOS.ocdef
++&
+!
+device-templates/FiOS.ocdef*:+
+!
+device-templates/FiOS.ocdef 
+portΊ
+!
+device-templates/FiOS.ocdef"”
+(
+!
+device-templates/FiOS.ocdef
++,
+!
+device-templates/FiOS.ocdef*sendir,Ή
+!
+device-templates/FiOS.ocdef"“
+(
+!
+device-templates/FiOS.ocdef
++.
+!
+device-templates/FiOS.ocdef!	
+address¶
+!
+device-templates/FiOS.ocdef)*,2,38000,1,37,340,170,20,84,20,84,20,170,20,170,20,84,20,170,20,84,20,84,20,84,20,84,20,84,20,84,20,84,20,170,20,84,20,84,20,1268,340,84,20,3365
+ΐ
+key6·
+"
+device-templates/FiOS.ocdef
+"
+device-templates/FiOS.ocdef"ζ
+p
+"
+device-templates/FiOS.ocdef"J
+
+	getLambda+
+"
+device-templates/FiOS.ocdef
+std*
+tcpRequest¬
+"
+device-templates/FiOS.ocdef‘"…
+)
+"
+device-templates/FiOS.ocdef‘
++,
+"
+device-templates/FiOS.ocdef‘
+host©
+"
+device-templates/FiOS.ocdef‘"‚
+)
+"
+device-templates/FiOS.ocdef‘
++'
+"
+device-templates/FiOS.ocdef‘*:,
+"
+device-templates/FiOS.ocdef‘ 
+portΒ
+"
+device-templates/FiOS.ocdef’"›
+)
+"
+device-templates/FiOS.ocdef’
++-
+"
+device-templates/FiOS.ocdef’*sendir,Ύ
+"
+device-templates/FiOS.ocdef’"—
+)
+"
+device-templates/FiOS.ocdef’
++/
+"
+device-templates/FiOS.ocdef’!	
+addressΈ
+"
+device-templates/FiOS.ocdef’)*‘,30,38000,1,37,343,172,18,86,18,172,18,172,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,172,18,86,18,172,18,1267,343,86,18,3370
+Ύ
+key8µ
+"
+device-templates/FiOS.ocdef‹
+"
+device-templates/FiOS.ocdef"δ
+p
+"
+device-templates/FiOS.ocdef"J
+
+	getLambda+
+"
+device-templates/FiOS.ocdef
+std*
+tcpRequest¬
+"
+device-templates/FiOS.ocdef™"…
+)
+"
+device-templates/FiOS.ocdef™
++,
+"
+device-templates/FiOS.ocdef™
+host©
+"
+device-templates/FiOS.ocdef™"‚
+)
+"
+device-templates/FiOS.ocdef™
++'
+"
+device-templates/FiOS.ocdef™*:,
+"
+device-templates/FiOS.ocdef™ 
+portΐ
+"
+device-templates/FiOS.ocdef"™
+)
+"
+device-templates/FiOS.ocdef
++-
+"
+device-templates/FiOS.ocdef*sendir,Ό
+"
+device-templates/FiOS.ocdef"•
+)
+"
+device-templates/FiOS.ocdef
++/
+"
+device-templates/FiOS.ocdef!	
+address¶
+"
+device-templates/FiOS.ocdef)*,32,38000,1,37,343,172,18,86,18,86,18,86,18,172,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,172,18,1439,343,86,18,3371
+±
+forward¥
+!
+device-templates/FiOS.ocdefRÿό
+!
+device-templates/FiOS.ocdefR"Φ
+n
+!
+device-templates/FiOS.ocdefR"I
+
+	getLambda*
+!
+device-templates/FiOS.ocdefR
+std*
+tcpRequest¤
+!
+device-templates/FiOS.ocdefS"ώ
+(
+!
+device-templates/FiOS.ocdefS
+++
+!
+device-templates/FiOS.ocdefS
+host¤
+!
+device-templates/FiOS.ocdefS"
+(
+!
+device-templates/FiOS.ocdefS
++&
+!
+device-templates/FiOS.ocdefS*:+
+!
+device-templates/FiOS.ocdefS 
+portΌ
+!
+device-templates/FiOS.ocdefT"–
+(
+!
+device-templates/FiOS.ocdefT
++,
+!
+device-templates/FiOS.ocdefT*sendir,»
+!
+device-templates/FiOS.ocdefT"•
+(
+!
+device-templates/FiOS.ocdefT
++.
+!
+device-templates/FiOS.ocdefT!	
+addressΈ
+!
+device-templates/FiOS.ocdefT)*’,20,38000,1,37,343,172,18,172,18,86,18,172,18,172,18,172,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,172,18,86,18,86,18,1182,343,86,18,3371
+®
+info¥
+!
+device-templates/FiOS.ocdefoÿό
+!
+device-templates/FiOS.ocdefo"Φ
+n
+!
+device-templates/FiOS.ocdefo"I
+
+	getLambda*
+!
+device-templates/FiOS.ocdefo
+std*
+tcpRequest¤
+!
+device-templates/FiOS.ocdefp"ώ
+(
+!
+device-templates/FiOS.ocdefp
+++
+!
+device-templates/FiOS.ocdefp
+host¤
+!
+device-templates/FiOS.ocdefp"
+(
+!
+device-templates/FiOS.ocdefp
++&
+!
+device-templates/FiOS.ocdefp*:+
+!
+device-templates/FiOS.ocdefp 
+portΌ
+!
+device-templates/FiOS.ocdefq"–
+(
+!
+device-templates/FiOS.ocdefq
++,
+!
+device-templates/FiOS.ocdefq*sendir,»
+!
+device-templates/FiOS.ocdefq"•
+(
+!
+device-templates/FiOS.ocdefq
++.
+!
+device-templates/FiOS.ocdefq!	
+addressΈ
+!
+device-templates/FiOS.ocdefq)*’,6,38000,1,37,343,172,18,172,18,172,18,86,18,86,18,172,18,172,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,172,18,86,18,172,18,1096,343,86,18,3371
+³
+channelDown£
+!
+device-templates/FiOS.ocdef,ύϊ
+!
+device-templates/FiOS.ocdef, "Τ
+n
+!
+device-templates/FiOS.ocdef,!"I
+
+	getLambda*
+!
+device-templates/FiOS.ocdef,!
+std*
+tcpRequest¤
+!
+device-templates/FiOS.ocdef-"ώ
+(
+!
+device-templates/FiOS.ocdef-
+++
+!
+device-templates/FiOS.ocdef-
+host¤
+!
+device-templates/FiOS.ocdef-"
+(
+!
+device-templates/FiOS.ocdef-
++&
+!
+device-templates/FiOS.ocdef-*:+
+!
+device-templates/FiOS.ocdef- 
+portΊ
+!
+device-templates/FiOS.ocdef."”
+(
+!
+device-templates/FiOS.ocdef.
++,
+!
+device-templates/FiOS.ocdef.*sendir,Ή
+!
+device-templates/FiOS.ocdef."“
+(
+!
+device-templates/FiOS.ocdef.
++.
+!
+device-templates/FiOS.ocdef.!	
+address¶
+!
+device-templates/FiOS.ocdef.)*,15,38000,1,37,343,172,18,86,18,86,18,172,18,172,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,172,18,86,18,1354,343,86,18,3371
+Ό
+key0³
+"
+device-templates/FiOS.ocdef ‰
+"
+device-templates/FiOS.ocdef "β
+p
+"
+device-templates/FiOS.ocdef "J
+
+	getLambda+
+"
+device-templates/FiOS.ocdef 
+std*
+tcpRequest¬
+"
+device-templates/FiOS.ocdef΅"…
+)
+"
+device-templates/FiOS.ocdef΅
++,
+"
+device-templates/FiOS.ocdef΅
+host©
+"
+device-templates/FiOS.ocdef΅"‚
+)
+"
+device-templates/FiOS.ocdef΅
++'
+"
+device-templates/FiOS.ocdef΅*:,
+"
+device-templates/FiOS.ocdef΅ 
+portΎ
+"
+device-templates/FiOS.ocdefΆ"—
+)
+"
+device-templates/FiOS.ocdefΆ
++-
+"
+device-templates/FiOS.ocdefΆ*sendir,Ί
+"
+device-templates/FiOS.ocdefΆ"“
+)
+"
+device-templates/FiOS.ocdefΆ
++/
+"
+device-templates/FiOS.ocdefΆ!	
+address΄
+"
+device-templates/FiOS.ocdefΆ)*,34,38000,1,37,343,172,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,1610,343,86,18,3369
+±
+next¨
+!
+device-templates/FiOS.ocdef<‚ÿ
+!
+device-templates/FiOS.ocdef<"Ω
+n
+!
+device-templates/FiOS.ocdef<"I
+
+	getLambda*
+!
+device-templates/FiOS.ocdef<
+std*
+tcpRequest¤
+!
+device-templates/FiOS.ocdef="ώ
+(
+!
+device-templates/FiOS.ocdef=
+++
+!
+device-templates/FiOS.ocdef=
+host¤
+!
+device-templates/FiOS.ocdef="
+(
+!
+device-templates/FiOS.ocdef=
++&
+!
+device-templates/FiOS.ocdef=*:+
+!
+device-templates/FiOS.ocdef= 
+portΏ
+!
+device-templates/FiOS.ocdef>"™
+(
+!
+device-templates/FiOS.ocdef>
++,
+!
+device-templates/FiOS.ocdef>*sendir,Ύ
+!
+device-templates/FiOS.ocdef>"
+(
+!
+device-templates/FiOS.ocdef>
++.
+!
+device-templates/FiOS.ocdef>!	
+address»
+!
+device-templates/FiOS.ocdef>)*•,18,38000,1,37,343,172,18,172,18,172,18,172,18,172,18,172,18,172,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,172,18,172,18,172,18,838,343,86,18,3371
+°
+options¤
+!
+device-templates/FiOS.ocdefeώϋ
+!
+device-templates/FiOS.ocdefe"Υ
+n
+!
+device-templates/FiOS.ocdefe"I
+
+	getLambda*
+!
+device-templates/FiOS.ocdefe
+std*
+tcpRequest¤
+!
+device-templates/FiOS.ocdeff"ώ
+(
+!
+device-templates/FiOS.ocdeff
+++
+!
+device-templates/FiOS.ocdeff
+host¤
+!
+device-templates/FiOS.ocdeff"
+(
+!
+device-templates/FiOS.ocdeff
++&
+!
+device-templates/FiOS.ocdeff*:+
+!
+device-templates/FiOS.ocdeff 
+port»
+!
+device-templates/FiOS.ocdefg"•
+(
+!
+device-templates/FiOS.ocdefg
++,
+!
+device-templates/FiOS.ocdefg*sendir,Ί
+!
+device-templates/FiOS.ocdefg"”
+(
+!
+device-templates/FiOS.ocdefg
++.
+!
+device-templates/FiOS.ocdefg!	
+address·
+!
+device-templates/FiOS.ocdefg)*‘,13,38000,1,37,343,172,18,86,18,172,18,86,18,86,18,86,18,86,18,172,18,86,18,86,18,86,18,86,18,86,18,86,18,172,18,86,18,172,18,1268,343,86,18,3371
+Ώ
+key4¶
+"
+device-templates/FiOS.ocdef
+"
+device-templates/FiOS.ocdef"ε
+p
+"
+device-templates/FiOS.ocdef"J
+
+	getLambda+
+"
+device-templates/FiOS.ocdef
+std*
+tcpRequest¬
+"
+device-templates/FiOS.ocdef‰"…
+)
+"
+device-templates/FiOS.ocdef‰
++,
+"
+device-templates/FiOS.ocdef‰
+host©
+"
+device-templates/FiOS.ocdef‰"‚
+)
+"
+device-templates/FiOS.ocdef‰
++'
+"
+device-templates/FiOS.ocdef‰*:,
+"
+device-templates/FiOS.ocdef‰ 
+portΑ
+"
+device-templates/FiOS.ocdef"
+)
+"
+device-templates/FiOS.ocdef
++-
+"
+device-templates/FiOS.ocdef*sendir,½
+"
+device-templates/FiOS.ocdef"–
+)
+"
+device-templates/FiOS.ocdef
++/
+"
+device-templates/FiOS.ocdef!	
+address·
+"
+device-templates/FiOS.ocdef)*,28,38000,1,37,343,172,18,86,18,86,18,172,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,172,18,172,18,1353,343,86,18,3370
+Α
+key5Έ
+"
+device-templates/FiOS.ocdef‘
+"
+device-templates/FiOS.ocdef"η
+p
+"
+device-templates/FiOS.ocdef"J
+
+	getLambda+
+"
+device-templates/FiOS.ocdef
+std*
+tcpRequest¬
+"
+device-templates/FiOS.ocdef"…
+)
+"
+device-templates/FiOS.ocdef
++,
+"
+device-templates/FiOS.ocdef
+host©
+"
+device-templates/FiOS.ocdef"‚
+)
+"
+device-templates/FiOS.ocdef
++'
+"
+device-templates/FiOS.ocdef*:,
+"
+device-templates/FiOS.ocdef 
+portΓ
+"
+device-templates/FiOS.ocdef"
+)
+"
+device-templates/FiOS.ocdef
++-
+"
+device-templates/FiOS.ocdef*sendir,Ώ
+"
+device-templates/FiOS.ocdef"
+)
+"
+device-templates/FiOS.ocdef
++/
+"
+device-templates/FiOS.ocdef!	
+addressΉ
+"
+device-templates/FiOS.ocdef)*’,29,38000,1,37,343,172,18,172,18,86,18,172,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,172,18,172,18,86,18,172,18,1181,343,86,18,3370
+°
+select¥
+!
+device-templates/FiOS.ocdef"ÿό
+!
+device-templates/FiOS.ocdef""Φ
+n
+!
+device-templates/FiOS.ocdef""I
+
+	getLambda*
+!
+device-templates/FiOS.ocdef"
+std*
+tcpRequest¤
+!
+device-templates/FiOS.ocdef#"ώ
+(
+!
+device-templates/FiOS.ocdef#
+++
+!
+device-templates/FiOS.ocdef#
+host¤
+!
+device-templates/FiOS.ocdef#"
+(
+!
+device-templates/FiOS.ocdef#
++&
+!
+device-templates/FiOS.ocdef#*:+
+!
+device-templates/FiOS.ocdef# 
+portΌ
+!
+device-templates/FiOS.ocdef$"–
+(
+!
+device-templates/FiOS.ocdef$
++,
+!
+device-templates/FiOS.ocdef$*sendir,»
+!
+device-templates/FiOS.ocdef$"•
+(
+!
+device-templates/FiOS.ocdef$
++.
+!
+device-templates/FiOS.ocdef$!	
+addressΈ
+!
+device-templates/FiOS.ocdef$)*’,11,38000,1,37,343,172,18,172,18,86,18,86,18,86,18,172,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,172,18,172,18,172,18,1182,343,86,18,3371
+Α
+key3Έ
+"
+device-templates/FiOS.ocdef„‘
+"
+device-templates/FiOS.ocdef„"η
+p
+"
+device-templates/FiOS.ocdef„"J
+
+	getLambda+
+"
+device-templates/FiOS.ocdef„
+std*
+tcpRequest¬
+"
+device-templates/FiOS.ocdef…"…
+)
+"
+device-templates/FiOS.ocdef…
++,
+"
+device-templates/FiOS.ocdef…
+host©
+"
+device-templates/FiOS.ocdef…"‚
+)
+"
+device-templates/FiOS.ocdef…
++'
+"
+device-templates/FiOS.ocdef…*:,
+"
+device-templates/FiOS.ocdef… 
+portΓ
+"
+device-templates/FiOS.ocdef†"
+)
+"
+device-templates/FiOS.ocdef†
++-
+"
+device-templates/FiOS.ocdef†*sendir,Ώ
+"
+device-templates/FiOS.ocdef†"
+)
+"
+device-templates/FiOS.ocdef†
++/
+"
+device-templates/FiOS.ocdef†!	
+addressΉ
+"
+device-templates/FiOS.ocdef†)*’,27,38000,1,37,343,172,18,172,18,172,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,172,18,86,18,172,18,172,18,1181,343,86,18,3370
+®
+play¥
+!
+device-templates/FiOS.ocdef[ÿό
+!
+device-templates/FiOS.ocdef["Φ
+n
+!
+device-templates/FiOS.ocdef["I
+
+	getLambda*
+!
+device-templates/FiOS.ocdef[
+std*
+tcpRequest¤
+!
+device-templates/FiOS.ocdef\"ώ
+(
+!
+device-templates/FiOS.ocdef\
+++
+!
+device-templates/FiOS.ocdef\
+host¤
+!
+device-templates/FiOS.ocdef\"
+(
+!
+device-templates/FiOS.ocdef\
++&
+!
+device-templates/FiOS.ocdef\*:+
+!
+device-templates/FiOS.ocdef\ 
+portΌ
+!
+device-templates/FiOS.ocdef]"–
+(
+!
+device-templates/FiOS.ocdef]
++,
+!
+device-templates/FiOS.ocdef]*sendir,»
+!
+device-templates/FiOS.ocdef]"•
+(
+!
+device-templates/FiOS.ocdef]
++.
+!
+device-templates/FiOS.ocdef]!	
+addressΈ
+!
+device-templates/FiOS.ocdef])*’,22,38000,1,37,343,172,18,172,18,172,18,86,18,172,18,172,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,172,18,86,18,1182,343,86,18,3371
+®
+stop¥
+!
+device-templates/FiOS.ocdef@ÿό
+!
+device-templates/FiOS.ocdef@"Φ
+n
+!
+device-templates/FiOS.ocdef@"I
+
+	getLambda*
+!
+device-templates/FiOS.ocdef@
+std*
+tcpRequest¤
+!
+device-templates/FiOS.ocdefA"ώ
+(
+!
+device-templates/FiOS.ocdefA
+++
+!
+device-templates/FiOS.ocdefA
+host¤
+!
+device-templates/FiOS.ocdefA"
+(
+!
+device-templates/FiOS.ocdefA
++&
+!
+device-templates/FiOS.ocdefA*:+
+!
+device-templates/FiOS.ocdefA 
+portΌ
+!
+device-templates/FiOS.ocdefB"–
+(
+!
+device-templates/FiOS.ocdefB
++,
+!
+device-templates/FiOS.ocdefB*sendir,»
+!
+device-templates/FiOS.ocdefB"•
+(
+!
+device-templates/FiOS.ocdefB
++.
+!
+device-templates/FiOS.ocdefB!	
+addressΈ
+!
+device-templates/FiOS.ocdefB)*’,23,38000,1,37,343,172,18,86,18,86,18,172,18,172,18,172,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,172,18,172,18,86,18,86,18,1182,343,86,18,3371
+®
+last¥
+!
+device-templates/FiOS.ocdef2ÿό
+!
+device-templates/FiOS.ocdef2"Φ
+n
+!
+device-templates/FiOS.ocdef2"I
+
+	getLambda*
+!
+device-templates/FiOS.ocdef2
+std*
+tcpRequest¤
+!
+device-templates/FiOS.ocdef3"ώ
+(
+!
+device-templates/FiOS.ocdef3
+++
+!
+device-templates/FiOS.ocdef3
+host¤
+!
+device-templates/FiOS.ocdef3"
+(
+!
+device-templates/FiOS.ocdef3
++&
+!
+device-templates/FiOS.ocdef3*:+
+!
+device-templates/FiOS.ocdef3 
+portΌ
+!
+device-templates/FiOS.ocdef4"–
+(
+!
+device-templates/FiOS.ocdef4
++,
+!
+device-templates/FiOS.ocdef4*sendir,»
+!
+device-templates/FiOS.ocdef4"•
+(
+!
+device-templates/FiOS.ocdef4
++.
+!
+device-templates/FiOS.ocdef4!	
+addressΈ
+!
+device-templates/FiOS.ocdef4)*’,37,38000,1,37,343,172,18,172,18,172,18,86,18,86,18,172,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,172,18,172,18,1182,343,86,18,3371
+®
+key1¥
+!
+device-templates/FiOS.ocdef|ÿό
+!
+device-templates/FiOS.ocdef|"Φ
+n
+!
+device-templates/FiOS.ocdef|"I
+
+	getLambda*
+!
+device-templates/FiOS.ocdef|
+std*
+tcpRequest¤
+!
+device-templates/FiOS.ocdef}"ώ
+(
+!
+device-templates/FiOS.ocdef}
+++
+!
+device-templates/FiOS.ocdef}
+host¤
+!
+device-templates/FiOS.ocdef}"
+(
+!
+device-templates/FiOS.ocdef}
++&
+!
+device-templates/FiOS.ocdef}*:+
+!
+device-templates/FiOS.ocdef} 
+portΌ
+!
+device-templates/FiOS.ocdef~"–
+(
+!
+device-templates/FiOS.ocdef~
++,
+!
+device-templates/FiOS.ocdef~*sendir,»
+!
+device-templates/FiOS.ocdef~"•
+(
+!
+device-templates/FiOS.ocdef~
++.
+!
+device-templates/FiOS.ocdef~!	
+addressΈ
+!
+device-templates/FiOS.ocdef~)*’,25,38000,1,37,343,172,18,172,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,172,18,172,18,172,18,172,18,1181,343,86,18,3370
+Α
+key7Έ
+"
+device-templates/FiOS.ocdef”‘
+"
+device-templates/FiOS.ocdef”"η
+p
+"
+device-templates/FiOS.ocdef”"J
+
+	getLambda+
+"
+device-templates/FiOS.ocdef”
+std*
+tcpRequest¬
+"
+device-templates/FiOS.ocdef•"…
+)
+"
+device-templates/FiOS.ocdef•
++,
+"
+device-templates/FiOS.ocdef•
+host©
+"
+device-templates/FiOS.ocdef•"‚
+)
+"
+device-templates/FiOS.ocdef•
++'
+"
+device-templates/FiOS.ocdef•*:,
+"
+device-templates/FiOS.ocdef• 
+portΓ
+"
+device-templates/FiOS.ocdef–"
+)
+"
+device-templates/FiOS.ocdef–
++-
+"
+device-templates/FiOS.ocdef–*sendir,Ώ
+"
+device-templates/FiOS.ocdef–"
+)
+"
+device-templates/FiOS.ocdef–
++/
+"
+device-templates/FiOS.ocdef–!	
+addressΉ
+"
+device-templates/FiOS.ocdef–)*’,31,38000,1,37,343,172,18,172,18,172,18,172,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,172,18,86,18,86,18,172,18,1182,343,86,18,3371
+°
+record¥
+!
+device-templates/FiOS.ocdefNÿό
+!
+device-templates/FiOS.ocdefN"Φ
+n
+!
+device-templates/FiOS.ocdefN"I
+
+	getLambda*
+!
+device-templates/FiOS.ocdefN
+std*
+tcpRequest¤
+!
+device-templates/FiOS.ocdefO"ώ
+(
+!
+device-templates/FiOS.ocdefO
+++
+!
+device-templates/FiOS.ocdefO
+host¤
+!
+device-templates/FiOS.ocdefO"
+(
+!
+device-templates/FiOS.ocdefO
++&
+!
+device-templates/FiOS.ocdefO*:+
+!
+device-templates/FiOS.ocdefO 
+portΌ
+!
+device-templates/FiOS.ocdefP"–
+(
+!
+device-templates/FiOS.ocdefP
++,
+!
+device-templates/FiOS.ocdefP*sendir,»
+!
+device-templates/FiOS.ocdefP"•
+(
+!
+device-templates/FiOS.ocdefP
++.
+!
+device-templates/FiOS.ocdefP!	
+addressΈ
+!
+device-templates/FiOS.ocdefP)*’,24,38000,1,37,343,172,18,172,18,86,18,86,18,86,18,172,18,172,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,172,18,172,18,1182,343,86,18,3371
+Α
+key9Έ
+"
+device-templates/FiOS.ocdef‘
+"
+device-templates/FiOS.ocdef"η
+p
+"
+device-templates/FiOS.ocdef"J
+
+	getLambda+
+"
+device-templates/FiOS.ocdef
+std*
+tcpRequest¬
+"
+device-templates/FiOS.ocdef"…
+)
+"
+device-templates/FiOS.ocdef
++,
+"
+device-templates/FiOS.ocdef
+host©
+"
+device-templates/FiOS.ocdef"‚
+)
+"
+device-templates/FiOS.ocdef
++'
+"
+device-templates/FiOS.ocdef*:,
+"
+device-templates/FiOS.ocdef 
+portΓ
+"
+device-templates/FiOS.ocdef"
+)
+"
+device-templates/FiOS.ocdef
++-
+"
+device-templates/FiOS.ocdef*sendir,Ώ
+"
+device-templates/FiOS.ocdef"
+)
+"
+device-templates/FiOS.ocdef
++/
+"
+device-templates/FiOS.ocdef!	
+addressΉ
+"
+device-templates/FiOS.ocdef)*’,33,38000,1,37,343,172,18,172,18,86,18,86,18,172,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,172,18,172,18,172,18,86,18,1181,343,86,18,3370
+¬
+off¤
+!
+device-templates/FiOS.ocdefώϋ
+!
+device-templates/FiOS.ocdef"Υ
+n
+!
+device-templates/FiOS.ocdef"I
+
+	getLambda*
+!
+device-templates/FiOS.ocdef
+std*
+tcpRequest¤
+!
+device-templates/FiOS.ocdef	"ώ
+(
+!
+device-templates/FiOS.ocdef	
+++
+!
+device-templates/FiOS.ocdef	
+host¤
+!
+device-templates/FiOS.ocdef	"
+(
+!
+device-templates/FiOS.ocdef	
++&
+!
+device-templates/FiOS.ocdef	*:+
+!
+device-templates/FiOS.ocdef	 
+port»
+!
+device-templates/FiOS.ocdef
+"•
+(
+!
+device-templates/FiOS.ocdef
+
++,
+!
+device-templates/FiOS.ocdef
+*sendir,Ί
+!
+device-templates/FiOS.ocdef
+"”
+(
+!
+device-templates/FiOS.ocdef
+
++.
+!
+device-templates/FiOS.ocdef
+!	
+address·
+!
+device-templates/FiOS.ocdef
+)*‘,3,38000,1,37,341,170,20,170,20,84,20,170,20,170,20,84,20,170,20,84,20,84,20,84,20,84,20,84,20,84,20,170,20,84,20,84,20,84,20,1182,341,84,20,3365
+®
+exit¥
+!
+device-templates/FiOS.ocdefiÿό
+!
+device-templates/FiOS.ocdefi"Φ
+n
+!
+device-templates/FiOS.ocdefi"I
+
+	getLambda*
+!
+device-templates/FiOS.ocdefi
+std*
+tcpRequest¤
+!
+device-templates/FiOS.ocdefj"ώ
+(
+!
+device-templates/FiOS.ocdefj
+++
+!
+device-templates/FiOS.ocdefj
+host¤
+!
+device-templates/FiOS.ocdefj"
+(
+!
+device-templates/FiOS.ocdefj
++&
+!
+device-templates/FiOS.ocdefj*:+
+!
+device-templates/FiOS.ocdefj 
+portΌ
+!
+device-templates/FiOS.ocdefk"–
+(
+!
+device-templates/FiOS.ocdefk
++,
+!
+device-templates/FiOS.ocdefk*sendir,»
+!
+device-templates/FiOS.ocdefk"•
+(
+!
+device-templates/FiOS.ocdefk
++.
+!
+device-templates/FiOS.ocdefk!	
+addressΈ
+!
+device-templates/FiOS.ocdefk)*’,12,38000,1,37,343,172,18,86,18,172,18,86,18,86,18,172,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,172,18,86,18,172,18,172,18,1182,343,86,18,3371
+³
+	channelUp¥
+!
+device-templates/FiOS.ocdef(ÿό
+!
+device-templates/FiOS.ocdef("Φ
+n
+!
+device-templates/FiOS.ocdef("I
+
+	getLambda*
+!
+device-templates/FiOS.ocdef(
+std*
+tcpRequest¤
+!
+device-templates/FiOS.ocdef)"ώ
+(
+!
+device-templates/FiOS.ocdef)
+++
+!
+device-templates/FiOS.ocdef)
+host¤
+!
+device-templates/FiOS.ocdef)"
+(
+!
+device-templates/FiOS.ocdef)
++&
+!
+device-templates/FiOS.ocdef)*:+
+!
+device-templates/FiOS.ocdef) 
+portΌ
+!
+device-templates/FiOS.ocdef*"–
+(
+!
+device-templates/FiOS.ocdef*
++,
+!
+device-templates/FiOS.ocdef**sendir,»
+!
+device-templates/FiOS.ocdef*"•
+(
+!
+device-templates/FiOS.ocdef*
++.
+!
+device-templates/FiOS.ocdef*!	
+addressΈ
+!
+device-templates/FiOS.ocdef*)*’,14,38000,1,37,343,172,18,172,18,172,18,86,18,172,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,172,18,86,18,172,18,86,18,1182,343,86,18,3371
+®
+guide¤
+!
+device-templates/FiOS.ocdefsώϋ
+!
+device-templates/FiOS.ocdefs"Υ
+n
+!
+device-templates/FiOS.ocdefs"I
+
+	getLambda*
+!
+device-templates/FiOS.ocdefs
+std*
+tcpRequest¤
+!
+device-templates/FiOS.ocdeft"ώ
+(
+!
+device-templates/FiOS.ocdeft
+++
+!
+device-templates/FiOS.ocdeft
+host¤
+!
+device-templates/FiOS.ocdeft"
+(
+!
+device-templates/FiOS.ocdeft
++&
+!
+device-templates/FiOS.ocdeft*:+
+!
+device-templates/FiOS.ocdeft 
+port»
+!
+device-templates/FiOS.ocdefu"•
+(
+!
+device-templates/FiOS.ocdefu
++,
+!
+device-templates/FiOS.ocdefu*sendir,Ί
+!
+device-templates/FiOS.ocdefu"”
+(
+!
+device-templates/FiOS.ocdefu
++.
+!
+device-templates/FiOS.ocdefu!	
+address·
+!
+device-templates/FiOS.ocdefu)*‘,5,38000,1,37,343,172,18,86,18,86,18,86,18,86,18,172,18,172,18,86,18,86,18,86,18,86,18,86,18,86,18,172,18,86,18,172,18,172,18,1182,343,86,18,3371
+―
+pause¥
+!
+device-templates/FiOS.ocdefWÿό
+!
+device-templates/FiOS.ocdefW"Φ
+n
+!
+device-templates/FiOS.ocdefW"I
+
+	getLambda*
+!
+device-templates/FiOS.ocdefW
+std*
+tcpRequest¤
+!
+device-templates/FiOS.ocdefX"ώ
+(
+!
+device-templates/FiOS.ocdefX
+++
+!
+device-templates/FiOS.ocdefX
+host¤
+!
+device-templates/FiOS.ocdefX"
+(
+!
+device-templates/FiOS.ocdefX
++&
+!
+device-templates/FiOS.ocdefX*:+
+!
+device-templates/FiOS.ocdefX 
+portΌ
+!
+device-templates/FiOS.ocdefY"–
+(
+!
+device-templates/FiOS.ocdefY
++,
+!
+device-templates/FiOS.ocdefY*sendir,»
+!
+device-templates/FiOS.ocdefY"•
+(
+!
+device-templates/FiOS.ocdefY
++.
+!
+device-templates/FiOS.ocdefY!	
+addressΈ
+!
+device-templates/FiOS.ocdefY)*’,21,38000,1,37,343,172,18,172,18,172,18,172,18,172,18,172,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,1182,343,86,18,3371
+ΐ
+key2·
+"
+device-templates/FiOS.ocdef€
+"
+device-templates/FiOS.ocdef€"ζ
+p
+"
+device-templates/FiOS.ocdef€"J
+
+	getLambda+
+"
+device-templates/FiOS.ocdef€
+std*
+tcpRequest¬
+"
+device-templates/FiOS.ocdef"…
+)
+"
+device-templates/FiOS.ocdef
++,
+"
+device-templates/FiOS.ocdef
+host©
+"
+device-templates/FiOS.ocdef"‚
+)
+"
+device-templates/FiOS.ocdef
++'
+"
+device-templates/FiOS.ocdef*:,
+"
+device-templates/FiOS.ocdef 
+portΒ
+"
+device-templates/FiOS.ocdef‚"›
+)
+"
+device-templates/FiOS.ocdef‚
++-
+"
+device-templates/FiOS.ocdef‚*sendir,Ύ
+"
+device-templates/FiOS.ocdef‚"—
+)
+"
+device-templates/FiOS.ocdef‚
++/
+"
+device-templates/FiOS.ocdef‚!	
+addressΈ
+"
+device-templates/FiOS.ocdef‚)*‘,26,38000,1,37,343,172,18,86,18,172,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,172,18,172,18,172,18,1267,343,86,18,3370
+―
+left¦
+!
+device-templates/FiOS.ocdef€ύ
+!
+device-templates/FiOS.ocdef"Χ
+n
+!
+device-templates/FiOS.ocdef"I
+
+	getLambda*
+!
+device-templates/FiOS.ocdef
+std*
+tcpRequest¤
+!
+device-templates/FiOS.ocdef"ώ
+(
+!
+device-templates/FiOS.ocdef
+++
+!
+device-templates/FiOS.ocdef
+host¤
+!
+device-templates/FiOS.ocdef"
+(
+!
+device-templates/FiOS.ocdef
++&
+!
+device-templates/FiOS.ocdef*:+
+!
+device-templates/FiOS.ocdef 
+port½
+!
+device-templates/FiOS.ocdef"—
+(
+!
+device-templates/FiOS.ocdef
++,
+!
+device-templates/FiOS.ocdef*sendir,Ό
+!
+device-templates/FiOS.ocdef"–
+(
+!
+device-templates/FiOS.ocdef
++.
+!
+device-templates/FiOS.ocdef!	
+addressΉ
+!
+device-templates/FiOS.ocdef)*“,9,38000,1,37,343,172,18,86,18,172,18,172,18,86,18,172,18,172,18,86,18,86,18,86,18,86,18,86,18,86,18,172,18,172,18,172,18,86,18,1010,343,86,18,3371
+­
+down¤
+!
+device-templates/FiOS.ocdefώϋ
+!
+device-templates/FiOS.ocdef"Υ
+n
+!
+device-templates/FiOS.ocdef"I
+
+	getLambda*
+!
+device-templates/FiOS.ocdef
+std*
+tcpRequest¤
+!
+device-templates/FiOS.ocdef"ώ
+(
+!
+device-templates/FiOS.ocdef
+++
+!
+device-templates/FiOS.ocdef
+host¤
+!
+device-templates/FiOS.ocdef"
+(
+!
+device-templates/FiOS.ocdef
++&
+!
+device-templates/FiOS.ocdef*:+
+!
+device-templates/FiOS.ocdef 
+port»
+!
+device-templates/FiOS.ocdef"•
+(
+!
+device-templates/FiOS.ocdef
++,
+!
+device-templates/FiOS.ocdef*sendir,Ί
+!
+device-templates/FiOS.ocdef"”
+(
+!
+device-templates/FiOS.ocdef
++.
+!
+device-templates/FiOS.ocdef!	
+address·
+!
+device-templates/FiOS.ocdef)*‘,8,38000,1,37,343,172,18,172,18,86,18,172,18,86,18,172,18,172,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,172,18,1182,343,86,18,3371
+«
+up¤
+!
+device-templates/FiOS.ocdefώϋ
+!
+device-templates/FiOS.ocdef"Υ
+n
+!
+device-templates/FiOS.ocdef"I
+
+	getLambda*
+!
+device-templates/FiOS.ocdef
+std*
+tcpRequest¤
+!
+device-templates/FiOS.ocdef"ώ
+(
+!
+device-templates/FiOS.ocdef
+++
+!
+device-templates/FiOS.ocdef
+host¤
+!
+device-templates/FiOS.ocdef"
+(
+!
+device-templates/FiOS.ocdef
++&
+!
+device-templates/FiOS.ocdef*:+
+!
+device-templates/FiOS.ocdef 
+port»
+!
+device-templates/FiOS.ocdef"•
+(
+!
+device-templates/FiOS.ocdef
++,
+!
+device-templates/FiOS.ocdef*sendir,Ί
+!
+device-templates/FiOS.ocdef"”
+(
+!
+device-templates/FiOS.ocdef
++.
+!
+device-templates/FiOS.ocdef!	
+address·
+!
+device-templates/FiOS.ocdef)*‘,7,38000,1,37,343,172,18,86,18,86,18,172,18,86,18,172,18,172,18,86,18,86,18,86,18,86,18,86,18,86,18,172,18,86,18,86,18,172,18,1182,343,86,18,3371
+­
+menu¤
+!
+device-templates/FiOS.ocdefaώϋ
+!
+device-templates/FiOS.ocdefa"Υ
+n
+!
+device-templates/FiOS.ocdefa"I
+
+	getLambda*
+!
+device-templates/FiOS.ocdefa
+std*
+tcpRequest¤
+!
+device-templates/FiOS.ocdefb"ώ
+(
+!
+device-templates/FiOS.ocdefb
+++
+!
+device-templates/FiOS.ocdefb
+host¤
+!
+device-templates/FiOS.ocdefb"
+(
+!
+device-templates/FiOS.ocdefb
++&
+!
+device-templates/FiOS.ocdefb*:+
+!
+device-templates/FiOS.ocdefb 
+port»
+!
+device-templates/FiOS.ocdefc"•
+(
+!
+device-templates/FiOS.ocdefc
++,
+!
+device-templates/FiOS.ocdefc*sendir,Ί
+!
+device-templates/FiOS.ocdefc"”
+(
+!
+device-templates/FiOS.ocdefc
++.
+!
+device-templates/FiOS.ocdefc!	
+address·
+!
+device-templates/FiOS.ocdefc)*‘,4,38000,1,37,343,172,18,172,18,86,18,86,18,172,18,172,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,172,18,172,18,86,18,1182,343,86,18,3371
+­
+dvr¥
+!
+device-templates/FiOS.ocdefwÿό
+!
+device-templates/FiOS.ocdefw"Φ
+n
+!
+device-templates/FiOS.ocdefw"I
+
+	getLambda*
+!
+device-templates/FiOS.ocdefw
+std*
+tcpRequest¤
+!
+device-templates/FiOS.ocdefx"ώ
+(
+!
+device-templates/FiOS.ocdefx
+++
+!
+device-templates/FiOS.ocdefx
+host¤
+!
+device-templates/FiOS.ocdefx"
+(
+!
+device-templates/FiOS.ocdefx
++&
+!
+device-templates/FiOS.ocdefx*:+
+!
+device-templates/FiOS.ocdefx 
+portΌ
+!
+device-templates/FiOS.ocdefy"–
+(
+!
+device-templates/FiOS.ocdefy
++,
+!
+device-templates/FiOS.ocdefy*sendir,»
+!
+device-templates/FiOS.ocdefy"•
+(
+!
+device-templates/FiOS.ocdefy
++.
+!
+device-templates/FiOS.ocdefy!	
+addressΈ
+!
+device-templates/FiOS.ocdefy)*’,16,38000,1,37,343,172,18,172,18,86,18,172,18,172,18,172,18,172,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,1182,343,86,18,3371
+ΐ
+pound¶
+"
+device-templates/FiOS.ocdef©
+"
+device-templates/FiOS.ocdef©"ε
+p
+"
+device-templates/FiOS.ocdef©"J
+
+	getLambda+
+"
+device-templates/FiOS.ocdef©
+std*
+tcpRequest¬
+"
+device-templates/FiOS.ocdefª"…
+)
+"
+device-templates/FiOS.ocdefª
++,
+"
+device-templates/FiOS.ocdefª
+host©
+"
+device-templates/FiOS.ocdefª"‚
+)
+"
+device-templates/FiOS.ocdefª
++'
+"
+device-templates/FiOS.ocdefª*:,
+"
+device-templates/FiOS.ocdefª 
+portΑ
+"
+device-templates/FiOS.ocdef«"
+)
+"
+device-templates/FiOS.ocdef«
++-
+"
+device-templates/FiOS.ocdef«*sendir,½
+"
+device-templates/FiOS.ocdef«"–
+)
+"
+device-templates/FiOS.ocdef«
++/
+"
+device-templates/FiOS.ocdef«!	
+address·
+"
+device-templates/FiOS.ocdef«)*,36,38000,1,37,343,172,18,86,18,86,18,86,18,86,18,86,18,86,18,172,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,172,18,172,18,1354,343,86,18,3371
+Ι
+closedCaptions¶
+"
+device-templates/FiOS.ocdef¥
+"
+device-templates/FiOS.ocdef¥#"ε
+p
+"
+device-templates/FiOS.ocdef¥$"J
+
+	getLambda+
+"
+device-templates/FiOS.ocdef¥$
+std*
+tcpRequest¬
+"
+device-templates/FiOS.ocdef¦"…
+)
+"
+device-templates/FiOS.ocdef¦
++,
+"
+device-templates/FiOS.ocdef¦
+host©
+"
+device-templates/FiOS.ocdef¦"‚
+)
+"
+device-templates/FiOS.ocdef¦
++'
+"
+device-templates/FiOS.ocdef¦*:,
+"
+device-templates/FiOS.ocdef¦ 
+portΑ
+"
+device-templates/FiOS.ocdef§"
+)
+"
+device-templates/FiOS.ocdef§
++-
+"
+device-templates/FiOS.ocdef§*sendir,½
+"
+device-templates/FiOS.ocdef§"–
+)
+"
+device-templates/FiOS.ocdef§
++/
+"
+device-templates/FiOS.ocdef§!	
+address·
+"
+device-templates/FiOS.ocdef§)*,35,38000,1,37,343,172,18,86,18,86,18,172,18,86,18,86,18,86,18,172,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,86,18,172,18,1353,343,86,18,3371Κ
+
+rooms/Nook/devices.ocdef"§
+)
+
+rooms/Nook/devices.ocdef
+mapOf‰
+
+rooms/Nook/devices.ocdef"ζ
+(
+
+rooms/Nook/devices.ocdef
+pair-
+
+rooms/Nook/devices.ocdef*centralRoku
+
+rooms/Nook/devices.ocdef"h
+(
+
+rooms/Nook/devices.ocdef
+roku<
+
+rooms/Nook/devices.ocdef*http://192.168.20.105:8060Β
+
+rooms/Nook/devices.ocdef	"
+(
+
+rooms/Nook/devices.ocdef	
+pair(
+
+rooms/Nook/devices.ocdef	*nookTVΘ
+
+rooms/Nook/devices.ocdef	"¥
+&
+
+rooms/Nook/devices.ocdef	
+tv/
+
+rooms/Nook/devices.ocdef	*192.168.20.62#
+
+rooms/Nook/devices.ocdef	(8†'%
+
+rooms/Nook/devices.ocdef	-*1:1¦
+
+rooms/Nook/devices.ocdef
+"ƒ
+(
+
+rooms/Nook/devices.ocdef
+
+pair/
+
+rooms/Nook/devices.ocdef
+*centralMatrix¥
+
+rooms/Nook/devices.ocdef
+"‚
+*
+
+rooms/Nook/devices.ocdef
+
+matrix/
+
+rooms/Nook/devices.ocdef
+#*192.168.20.66#
+
+rooms/Nook/devices.ocdef
+38‡'³
+
+rooms/Nook/devices.ocdef"
+(
+
+rooms/Nook/devices.ocdef
+pair6
+
+rooms/Nook/devices.ocdef*centralAudioReceiver«
+
+rooms/Nook/devices.ocdef""
+1
+
+rooms/Nook/devices.ocdef#
+audioReceiver/
+
+rooms/Nook/devices.ocdef1*192.168.20.30"
+
+rooms/Nook/devices.ocdefA8Ι
+
+rooms/Nook/devices.ocdef"¦
+(
+
+rooms/Nook/devices.ocdef
+pair-
+
+rooms/Nook/devices.ocdef*centralFiOSΚ
+
+rooms/Nook/devices.ocdef"§
+(
+
+rooms/Nook/devices.ocdef
+fios/
+
+rooms/Nook/devices.ocdef*192.168.20.60#
+
+rooms/Nook/devices.ocdef/8†'%
+
+rooms/Nook/devices.ocdef4*1:1
+¦_
+fios__
+%
+controller-templates/FiOS.ocdefπ^
+id
+name
+fios
+tv
+matrix
+matrixOutput
+matrixInput
+audioReceiver
+audioReceiverZone
+audioReceiverOutputÿ]
+%
+controller-templates/FiOS.ocdefbΥ]
+-
+%
+controller-templates/FiOS.ocdef
+id/
+%
+controller-templates/FiOS.ocdef
+name0
+%
+controller-templates/FiOS.ocdef*#ff534f"ΐ\
+%
+controller-templates/FiOS.ocdefj–\
+”&
+%
+controller-templates/FiOS.ocdefzκ%row"“zrow"Ν	zΚ	buttonμ
+onClickΰ
+%
+controller-templates/FiOS.ocdef&¶³
+%
+controller-templates/FiOS.ocdef,"‰
+5
+%
+controller-templates/FiOS.ocdef-
+
+runEffectsΙ
+%
+controller-templates/FiOS.ocdef!
+%
+controller-templates/FiOS.ocdef'"s
+q
+%
+controller-templates/FiOS.ocdef("H
+
+	getLambda/
+%
+controller-templates/FiOS.ocdef(
+fios*key6΄
+%
+controller-templates/FiOS.ocdef!‡
+%
+controller-templates/FiOS.ocdef'"^
+0
+%
+controller-templates/FiOS.ocdef(
+delay*
+%
+controller-templates/FiOS.ocdef.8ΘΙ
+%
+controller-templates/FiOS.ocdef!
+%
+controller-templates/FiOS.ocdef'"s
+q
+%
+controller-templates/FiOS.ocdef("H
+
+	getLambda/
+%
+controller-templates/FiOS.ocdef(
+fios*key6΄
+%
+controller-templates/FiOS.ocdef!‡
+%
+controller-templates/FiOS.ocdef'"^
+0
+%
+controller-templates/FiOS.ocdef(
+delay*
+%
+controller-templates/FiOS.ocdef.8ΘΙ
+%
+controller-templates/FiOS.ocdef!
+%
+controller-templates/FiOS.ocdef'"s
+q
+%
+controller-templates/FiOS.ocdef("H
+
+	getLambda/
+%
+controller-templates/FiOS.ocdef(
+fios*key51
+size)
+%
+controller-templates/FiOS.ocdef#8
+icon*HOME
+text*HGTV"ΩzΦbutton
+text*DVR{
+onClickp
+%
+controller-templates/FiOS.ocdef&"G
+
+	getLambda/
+%
+controller-templates/FiOS.ocdef&
+fios*dvr1
+size)
+%
+controller-templates/FiOS.ocdef#8
+icon*DVR"άzΩbutton1
+size)
+%
+controller-templates/FiOS.ocdef #8|
+onClickq
+%
+controller-templates/FiOS.ocdef&"H
+
+	getLambda/
+%
+controller-templates/FiOS.ocdef&
+fios*exit
+text*Exit
+icon*EXIT"ΜzΙrow"ΑzΎbuttongroup1
+size)
+%
+controller-templates/FiOS.ocdef$,8"»zΈbutton
+icon*OFF
+onClickƒ
+%
+controller-templates/FiOS.ocdef&*ΩΦ
+%
+controller-templates/FiOS.ocdef&0"¬
+5
+%
+controller-templates/FiOS.ocdef&1
+
+runEffectsp
+%
+controller-templates/FiOS.ocdef'%"G
+
+	getLambda/
+%
+controller-templates/FiOS.ocdef'%
+fios*off
+%
+controller-templates/FiOS.ocdef(%ζγ
+%
+controller-templates/FiOS.ocdef(+"Ή
+y
+%
+controller-templates/FiOS.ocdef(,"P
+
+	getLambda8
+%
+controller-templates/FiOS.ocdef(,
+audioReceiver*off<
+%
+controller-templates/FiOS.ocdef(>
+audioReceiverZonen
+%
+controller-templates/FiOS.ocdef)%"E
+
+	getLambda-
+%
+controller-templates/FiOS.ocdef)%
+tv*off
+text*Off"½zΊbutton
+text*On
+icon*ON“
+onClick‡
+%
+controller-templates/FiOS.ocdef/*έΪ
+%
+controller-templates/FiOS.ocdef/0"°
+5
+%
+controller-templates/FiOS.ocdef/1
+
+runEffectsm
+%
+controller-templates/FiOS.ocdef0%"D
+
+	getLambda-
+%
+controller-templates/FiOS.ocdef0%
+tv*on΄
+%
+controller-templates/FiOS.ocdef1%‡
+%
+controller-templates/FiOS.ocdef1+"^
+0
+%
+controller-templates/FiOS.ocdef1,
+delay*
+%
+controller-templates/FiOS.ocdef128τΌ
+%
+controller-templates/FiOS.ocdef2%’
+%
+controller-templates/FiOS.ocdef2+"ε
+r
+%
+controller-templates/FiOS.ocdef2,"I
+
+	getLambda1
+%
+controller-templates/FiOS.ocdef2,
+matrix*set7
+%
+controller-templates/FiOS.ocdef27
+matrixOutput6
+%
+controller-templates/FiOS.ocdef2D
+matrixInput΄
+%
+controller-templates/FiOS.ocdef3%‡
+%
+controller-templates/FiOS.ocdef3+"^
+0
+%
+controller-templates/FiOS.ocdef3,
+delay*
+%
+controller-templates/FiOS.ocdef328”#
+%
+controller-templates/FiOS.ocdef4%εβ
+%
+controller-templates/FiOS.ocdef4+"Έ
+x
+%
+controller-templates/FiOS.ocdef4,"O
+
+	getLambda8
+%
+controller-templates/FiOS.ocdef4,
+audioReceiver*on<
+%
+controller-templates/FiOS.ocdef4=
+audioReceiverZone΄
+%
+controller-templates/FiOS.ocdef5%‡
+%
+controller-templates/FiOS.ocdef5+"^
+0
+%
+controller-templates/FiOS.ocdef5,
+delay*
+%
+controller-templates/FiOS.ocdef528”#Π
+%
+controller-templates/FiOS.ocdef6%¦£
+%
+controller-templates/FiOS.ocdef6+"ω
+y
+%
+controller-templates/FiOS.ocdef6,"P
+
+	getLambda8
+%
+controller-templates/FiOS.ocdef6,
+audioReceiver*set<
+%
+controller-templates/FiOS.ocdef6>
+audioReceiverZone>
+%
+controller-templates/FiOS.ocdef6P
+audioReceiverOutput΄
+%
+controller-templates/FiOS.ocdef7%‡
+%
+controller-templates/FiOS.ocdef7+"^
+0
+%
+controller-templates/FiOS.ocdef7,
+delay*
+%
+controller-templates/FiOS.ocdef728Ό–
+%
+controller-templates/FiOS.ocdef8%μι
+%
+controller-templates/FiOS.ocdef8+"Ώ
+
+%
+controller-templates/FiOS.ocdef8,"V
+
+	getLambda8
+%
+controller-templates/FiOS.ocdef8,
+audioReceiver*	volumeSet<
+%
+controller-templates/FiOS.ocdef8D
+audioReceiverZoneo
+%
+controller-templates/FiOS.ocdef9%"F
+
+	getLambda/
+%
+controller-templates/FiOS.ocdef9%
+fios*on
+Γ
+%
+controller-templates/FiOS.ocdefAz™swipepad©
+onBottomHold
+%
+controller-templates/FiOS.ocdefN#ξλ
+%
+controller-templates/FiOS.ocdefO"Α
+€
+%
+controller-templates/FiOS.ocdefO"W
+
+	getLambda8
+%
+controller-templates/FiOS.ocdefO
+audioReceiver*
+volumeMute<
+%
+controller-templates/FiOS.ocdefO3
+audioReceiverZone|
+	onSwipeUpo
+%
+controller-templates/FiOS.ocdefC "F
+
+	getLambda/
+%
+controller-templates/FiOS.ocdefC 
+fios*upª
+onBottomIncrease•
+%
+controller-templates/FiOS.ocdefH'λθ
+%
+controller-templates/FiOS.ocdefI"Ύ
+~
+%
+controller-templates/FiOS.ocdefI"U
+
+	getLambda8
+%
+controller-templates/FiOS.ocdefI
+audioReceiver
+*volumeUp<
+%
+controller-templates/FiOS.ocdefI1
+audioReceiverZone3
+expand)
+%
+controller-templates/FiOS.ocdefBH!
+bottomIncreaseIcon*	VOLUME_UP#
+bottomDecreaseIcon*VOLUME_DOWN€
+onSwipeLeftq
+%
+controller-templates/FiOS.ocdefE""H
+
+	getLambda/
+%
+controller-templates/FiOS.ocdefE"
+fios*left‚
+onSwipeRightr
+%
+controller-templates/FiOS.ocdefF#"I
+
+	getLambda/
+%
+controller-templates/FiOS.ocdefF#
+fios*right€
+onSwipeDownq
+%
+controller-templates/FiOS.ocdefD""H
+
+	getLambda/
+%
+controller-templates/FiOS.ocdefD"
+fios*down~
+onClicks
+%
+controller-templates/FiOS.ocdefG"J
+
+	getLambda/
+%
+controller-templates/FiOS.ocdefG
+fios*select­
+onBottomDecrease
+%
+controller-templates/FiOS.ocdefK'ξλ
+%
+controller-templates/FiOS.ocdefL"Α
+€
+%
+controller-templates/FiOS.ocdefL"W
+
+	getLambda8
+%
+controller-templates/FiOS.ocdefL
+audioReceiver*
+volumeDown<
+%
+controller-templates/FiOS.ocdefL3
+audioReceiverZone
+¶(
+%
+controller-templates/FiOS.ocdefTz(row"ήzΫcolumn"ρzξbutton€
+onClicku
+%
+controller-templates/FiOS.ocdefW&"L
+
+	getLambda/
+%
+controller-templates/FiOS.ocdefW&
+fios
+*previous
+text*Skip Reverse1
+size)
+%
+controller-templates/FiOS.ocdefZ#8
+icon*SKIP_REVERSE"άzΩbutton
+text*Stop|
+onClickq
+%
+controller-templates/FiOS.ocdef]&"H
+
+	getLambda/
+%
+controller-templates/FiOS.ocdef]&
+fios*stop1
+size)
+%
+controller-templates/FiOS.ocdef`#8
+icon*STOP"έzΪbutton}
+onClickr
+%
+controller-templates/FiOS.ocdefd""I
+
+	getLambda/
+%
+controller-templates/FiOS.ocdefd"
+fios*pause
+text*Play1
+size)
+%
+controller-templates/FiOS.ocdefg8
+icon*PLAY"Γ"zΐ"column"μzιbutton
+text*Skip Forward
+icon*SKIP_FORWARD1
+size)
+%
+controller-templates/FiOS.ocdefn#8|
+onClickq
+%
+controller-templates/FiOS.ocdefk&"H
+
+	getLambda/
+%
+controller-templates/FiOS.ocdefk&
+fios*next"Ζ zΓ 
+menubutton
+text*Menu1
+size)
+%
+controller-templates/FiOS.ocdefs#8
+icon
+*MENU_ALT"£z row"©z¦button
+icon*MENU|
+onClickq
+%
+controller-templates/FiOS.ocdefw."H
+
+	getLambda/
+%
+controller-templates/FiOS.ocdefw.
+fios*menu
+text*Menu"·z΄column"©z¦row"±z®button
+text	*Reverse
+icon	*REVERSE~
+onClicks
+%
+controller-templates/FiOS.ocdef~6"J
+
+	getLambda/
+%
+controller-templates/FiOS.ocdef~6
+fios*rewind"²z―button
+icon*RECORD€
+onClicku
+&
+controller-templates/FiOS.ocdefƒ6"K
+
+	getLambda0
+&
+controller-templates/FiOS.ocdefƒ6
+fios*record
+text*Record"µz²button
+onClickv
+&
+controller-templates/FiOS.ocdef6"L
+
+	getLambda0
+&
+controller-templates/FiOS.ocdef6
+fios	*forward
+text	*Forward
+icon	*FORWARD"²z―button
+text*Delete
+icon*REMOVE€
+onClicku
+&
+controller-templates/FiOS.ocdef."K
+
+	getLambda0
+&
+controller-templates/FiOS.ocdef.
+fios*delete"·z΄row"ΙzΖcolumn"µz²button
+onClickv
+&
+controller-templates/FiOS.ocdef—2"L
+
+	getLambda0
+&
+controller-templates/FiOS.ocdef—2
+fios	*options
+text	*Options
+icon	*OPTIONS"½zΊbutton
+text*
+Channel Upƒ
+onClickx
+&
+controller-templates/FiOS.ocdef2"N
+
+	getLambda0
+&
+controller-templates/FiOS.ocdef2
+fios*	channelUp
+icon*
+CHANNEL_UP"Γzΐbutton
+icon*CHANNEL_DOWN…
+onClickz
+&
+controller-templates/FiOS.ocdef΅2"P
+
+	getLambda0
+&
+controller-templates/FiOS.ocdef΅2
+fios*channelDown
+text*Channel Down"ΕzΒcolumn"ΩzΦrow"z•button~
+onClicks
+&
+controller-templates/FiOS.ocdef©6"I
+
+	getLambda0
+&
+controller-templates/FiOS.ocdef©6
+fios*key1
+text*1"z•button
+text*2~
+onClicks
+&
+controller-templates/FiOS.ocdef­6"I
+
+	getLambda0
+&
+controller-templates/FiOS.ocdef­6
+fios*key2"z•button~
+onClicks
+&
+controller-templates/FiOS.ocdef±6"I
+
+	getLambda0
+&
+controller-templates/FiOS.ocdef±6
+fios*key3
+text*3"ΩzΦrow"z•button~
+onClicks
+&
+controller-templates/FiOS.ocdef·6"I
+
+	getLambda0
+&
+controller-templates/FiOS.ocdef·6
+fios*key4
+text*4"z•button~
+onClicks
+&
+controller-templates/FiOS.ocdef»6"I
+
+	getLambda0
+&
+controller-templates/FiOS.ocdef»6
+fios*key5
+text*5"z•button~
+onClicks
+&
+controller-templates/FiOS.ocdefΏ6"I
+
+	getLambda0
+&
+controller-templates/FiOS.ocdefΏ6
+fios*key6
+text*6"ΩzΦrow"z•button~
+onClicks
+&
+controller-templates/FiOS.ocdefΕ6"I
+
+	getLambda0
+&
+controller-templates/FiOS.ocdefΕ6
+fios*key7
+text*7"z•button
+text*8~
+onClicks
+&
+controller-templates/FiOS.ocdefΙ6"I
+
+	getLambda0
+&
+controller-templates/FiOS.ocdefΙ6
+fios*key8"z•button~
+onClicks
+&
+controller-templates/FiOS.ocdefΝ6"I
+
+	getLambda0
+&
+controller-templates/FiOS.ocdefΝ6
+fios*key9
+text*9"£z row"ΜzΙbutton
+icon*CLOSED_CAPTIONS
+onClick}
+&
+controller-templates/FiOS.ocdefΣ6"S
+
+	getLambda0
+&
+controller-templates/FiOS.ocdefΣ6
+fios*closedCaptions
+text*Closed Captions"z•button~
+onClicks
+&
+controller-templates/FiOS.ocdefΨ6"I
+
+	getLambda0
+&
+controller-templates/FiOS.ocdefΨ6
+fios*key0
+text*0"®z«button
+onClickt
+&
+controller-templates/FiOS.ocdefά6"J
+
+	getLambda0
+&
+controller-templates/FiOS.ocdefά6
+fios*pound
+icon*POUND
+text*Pound"z•column"«z¨button~
+onClicks
+&
+controller-templates/FiOS.ocdefδ2"I
+
+	getLambda0
+&
+controller-templates/FiOS.ocdefδ2
+fios*info
+text*Info
+icon*INFO"®z«button
+icon*GUIDE
+onClickt
+&
+controller-templates/FiOS.ocdefι2"J
+
+	getLambda0
+&
+controller-templates/FiOS.ocdefι2
+fios*guide
+text*Guide"«z¨button
+text*Last
+icon*BACK~
+onClicks
+&
+controller-templates/FiOS.ocdefξ2"I
+
+	getLambda0
+&
+controller-templates/FiOS.ocdefξ2
+fios*lastΩ
+
+rooms/Nook/room.ocdefZΉ
+#
+
+rooms/Nook/room.ocdef*nook#
+
+rooms/Nook/room.ocdef*Nookδ
+
+rooms/Nook/room.ocdef
+	"Δ
+%
+
+rooms/Nook/room.ocdef
 
-testControllerTemplate"Test Controller"https://google.com"ROOM(J&
-"Test"test
-test
+
+fios'
+
+rooms/Nook/room.ocdef*nookFiOS#
+
+rooms/Nook/room.ocdef*FiOSΜ
+
+rooms/Nook/room.ocdef"¬
+'
+
+rooms/Nook/room.ocdef
+unwrap€
+
+rooms/Nook/room.ocdef"a
+	
+index(
+
+rooms/Nook/room.ocdef	
+devices*
+
+rooms/Nook/room.ocdef*centralFiOSΖ
+
+rooms/Nook/room.ocdef"¦
+'
+
+rooms/Nook/room.ocdef
+unwrap{
+
+rooms/Nook/room.ocdef"\
+	
+index(
+
+rooms/Nook/room.ocdef	
+devices%
+
+rooms/Nook/room.ocdef*nookTVΞ
+
+rooms/Nook/room.ocdef"®
+'
+
+rooms/Nook/room.ocdef
+unwrap‚
+
+rooms/Nook/room.ocdef"c
+	
+index(
+
+rooms/Nook/room.ocdef	
+devices,
+
+rooms/Nook/room.ocdef*centralMatrix 
+
+rooms/Nook/room.ocdef*1 
+
+rooms/Nook/room.ocdef*1Υ
+
+rooms/Nook/room.ocdef"µ
+'
+
+rooms/Nook/room.ocdef
+unwrap‰
+
+rooms/Nook/room.ocdef"j
+	
+index(
+
+rooms/Nook/room.ocdef	
+devices3
+
+rooms/Nook/room.ocdef*centralAudioReceiver 
+
+rooms/Nook/room.ocdef*2&
+
+rooms/Nook/room.ocdef*SAT/CBLΰ
+
+rooms/Nook/room.ocdef	"ΐ
+%
+
+rooms/Nook/room.ocdef
+
+roku'
+
+rooms/Nook/room.ocdef*nookRoku#
+
+rooms/Nook/room.ocdef*RokuΜ
+
+rooms/Nook/room.ocdef"¬
+'
+
+rooms/Nook/room.ocdef
+unwrap€
+
+rooms/Nook/room.ocdef"a
+	
+index(
+
+rooms/Nook/room.ocdef	
+devices*
+
+rooms/Nook/room.ocdef*centralRokuΖ
+
+rooms/Nook/room.ocdef"¦
+'
+
+rooms/Nook/room.ocdef
+unwrap{
+
+rooms/Nook/room.ocdef"\
+	
+index(
+
+rooms/Nook/room.ocdef	
+devices%
+
+rooms/Nook/room.ocdef*nookTVΞ
+
+rooms/Nook/room.ocdef"®
+'
+
+rooms/Nook/room.ocdef
+unwrap‚
+
+rooms/Nook/room.ocdef"c
+	
+index(
+
+rooms/Nook/room.ocdef	
+devices,
+
+rooms/Nook/room.ocdef*centralMatrix 
+
+rooms/Nook/room.ocdef*1 
+
+rooms/Nook/room.ocdef*2Υ
+
+rooms/Nook/room.ocdef"µ
+'
+
+rooms/Nook/room.ocdef
+unwrap‰
+
+rooms/Nook/room.ocdef"j
+	
+index(
+
+rooms/Nook/room.ocdef	
+devices3
+
+rooms/Nook/room.ocdef*centralAudioReceiver 
+
+rooms/Nook/room.ocdef*2"
+
+rooms/Nook/room.ocdef *DVD"#
+
+rooms/Nook/room.ocdef
+*NOOKo
+
 
+home.ocdefR[
+
+
 
-testRoom
+home.ocdef*
+Test House
+
+
+home.ocdef*	testHouse
+
+
+home.ocdef	
+nook
