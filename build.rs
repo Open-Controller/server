@@ -1,7 +1,7 @@
-extern crate protoc_rust;
+extern crate protobuf_codegen;
 
 fn main() {
-    protoc_rust::Codegen::new()
+    protobuf_codegen::Codegen::new()
         .out_dir("src/")
         .inputs(&["proto/OpenControllerLib.proto"])
         .include("proto")

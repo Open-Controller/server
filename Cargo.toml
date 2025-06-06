@@ -7,24 +7,25 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-clap = "3.2.20"
+clap = "4.5.38"
 structopt = "0.3.26"
 envy = "0.4"
-serde = "1.0"
-serde_derive = "1.0"
-protobuf = { git = "https://github.com/stepancheg/rust-protobuf.git" }
-hotwatch = "0.4"
-once_cell = "1"
+serde = "1.0.219"
+serde_derive = "1.0.219"
+protobuf = "3.7.2"
+hotwatch = "0.5.0"
+once_cell = "1.21.3"
 tide = "0.16"
-async-std = { version = "1.12.0", features = ["attributes"] }
-env_logger = "0.9.0"
-log = "0.4.17"
+async-std = { version = "1.13.0", features = ["attributes"] }
+env_logger = "0.11.8"
+log = "0.4.27"
 anyhow = "1.0"
 
 [build-dependencies]
-protoc-rust = { git = "https://github.com/stepancheg/rust-protobuf.git" }
+protobuf-codegen = "3.7.2"
 
 [dev-dependencies]
-assert_cmd = "2.0.4"
-predicates = "2.1.1"
+assert_cmd = "2.0.17"
+predicates = "3.1.3"
 surf = "2.3.2"
+openssl = { version = "0.10", features = ["vendored"] }

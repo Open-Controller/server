@@ -16,7 +16,7 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
 use anyhow::{Context, Result};
-use hotwatch::{Event, Hotwatch};
+use hotwatch::{Event, EventKind, Hotwatch};
 use log::info;
 use once_cell::sync::Lazy;
 use protobuf::Message;
@@ -28,16 +28,16 @@ use OpenControllerLib::*;
 
 mod OpenControllerLib;
 
-static HOUSE: Lazy<Mutex<Option<Vec<u8>>>> = Lazy::new(||
-    Mutex::new(None)
-);
+static HOUSE: Lazy<Mutex<Option<Vec<u8>>>> = Lazy::new(|| Mutex::new(None));
 
-fn default_port() -> i32 { 3612 }
+fn default_port() -> i32 {
+    3612
+}
 
 #[derive(Deserialize, Debug)]
 struct Environment {
-    #[serde(default="default_port")]
-    port: i32
+    #[serde(default = "default_port")]
+    port: i32,
 }
 #[derive(Debug, StructOpt)]
 #[structopt(
@@ -50,7 +50,11 @@ struct Opts {
     #[structopt(parse(from_os_str), help = "Sets the input file to use")]
     input: PathBuf,
 
-    #[structopt(short = "v", help = "Sets the level of verbosity", default_value = "INFO")]
+    #[structopt(
+        short = "v",
+        help = "Sets the level of verbosity",
+        default_value = "INFO"
+    )]
     verbosity: String,
 }
 
@@ -58,8 +62,7 @@ async fn get_home(_: Request<()>) -> tide::Result {
     Ok(tide::Response::builder(200)
         .content_type("application/x-protobuf")
         .body(HOUSE.lock().unwrap().as_ref().unwrap().clone())
-        .build()
-    )
+        .build())
 }
 
 #[async_std::main]
@@ -76,18 +79,25 @@ async fn main() -> Result<()> {
     *HOUSE.lock().unwrap() = Some(bytes);
 
     let mut input_watcher = Hotwatch::new().context("Hotwatch failed to initialize")?;
-    input_watcher.watch(&opts.input, |event: Event| {
-        if let Event::Write(path) = event {
-            let bytes = fs::read(path).expect("Could not read file");
-            Module::parse_from_bytes(&bytes).expect("Invalid file");
-            *HOUSE.lock().unwrap() = Some(bytes);
-            info!("Reloaded file");
-        }
-    }).context("Failed to watch file")?;
+    input_watcher
+        .watch(&opts.input, |event: Event| {
+            if let EventKind::Modify(_) = event.kind {
+                if let Some(path) = event.paths.first() {
+                    let bytes = fs::read(path).expect("Could not read file");
+                    Module::parse_from_bytes(&bytes).expect("Invalid file");
+                    *HOUSE.lock().unwrap() = Some(bytes);
+                    info!("Reloaded file");
+                }
+            }
+        })
+        .context("Failed to watch file")?;
 
     let mut server = tide::new();
     server.at("/").get(get_home);
-    server.listen("0.0.0.0:".to_string() + &env.port.to_string()).await.context("Failed to start server")?;
+    server
+        .listen("0.0.0.0:".to_string() + &env.port.to_string())
+        .await
+        .context("Failed to start server")?;
 
     Ok(())
 }
@@ -117,7 +127,7 @@ mod tests {
 
         cmd.arg("./test/house.ocbin");
         let mut child = cmd.spawn()?;
-        
+
         sleep(Duration::from_millis(300)).await;
 
         let bytes = surf::get("http://0.0.0.0:3612").recv_bytes().await?;
